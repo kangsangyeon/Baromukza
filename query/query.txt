@@ -1,0 +1,146 @@
+﻿-- 테이블 순서는 관계를 고려하여 한 번에 실행해도 에러가 발생하지 않게 정렬되었습니다.
+
+-- DB 생성
+CREATE DATABASE baromukza;
+USE baromukza;
+
+
+-- 코드 테이블
+-- code_bank Table Create SQL
+CREATE TABLE code_bank
+(
+    `bank_seq`  INT            NOT NULL             AUTO_INCREMENT,
+    `name`      VARCHAR(20)    NULL                 ,
+    PRIMARY KEY (bank_seq)
+);
+-- refund_account Table Create SQL
+CREATE TABLE bank_account
+(
+    `bank_account_seq`  INT            NOT NULL     AUTO_INCREMENT,
+    `bank_seq`            INT            NULL       REFERENCES code_bank(bank_seq),
+    `account`             VARCHAR(45)    NULL       ,
+    PRIMARY KEY (bank_account_seq)
+);
+-- restaurant_category Table Create SQL
+CREATE TABLE restaurant_category
+(
+    `category_seq`  INT            NOT NULL         AUTO_INCREMENT,
+    `name`          VARCHAR(20)    NULL             ,
+    PRIMARY KEY (category_seq)
+);
+
+
+-- 데이터 테이블
+ -- member Table Create SQL
+ CREATE TABLE member
+ (
+     `member_seq`          INT             NOT NULL    AUTO_INCREMENT,
+     `id`                  VARCHAR(20)     NOT NULL   ,
+     `password`            VARCHAR(20)     NOT NULL   ,
+     `name`                VARCHAR(20)     NOT NULL   ,
+     `birth`               DATE            NOT NULL   ,
+     `gender`              CHAR(1)         NOT NULL   ,
+     `phone`               VARCHAR(20)     NOT NULL   ,
+     `image`               VARCHAR(100)    NOT NULL   ,
+     `email`               VARCHAR(45)     NOT NULL   ,
+     `check_term`          CHAR(1)         NOT NULL   ,
+     `refund_account_seq`  INT             NULL       REFERENCES bank_account(bank_account_seq),
+     `join_date`           DATETIME        NOT NULL   ,
+     PRIMARY KEY (member_seq)
+ );
+ -- owner Table Create SQL
+ CREATE TABLE owner
+ (
+     `owner_seq`         INT            NOT NULL    AUTO_INCREMENT,
+     `id`                VARCHAR(20)    NOT NULL    ,
+     `password`          VARCHAR(20)    NOT NULL    ,
+     `name`              VARCHAR(20)    NOT NULL    ,
+     `phone`             VARCHAR(20)    NOT NULL    ,
+     `email`             VARCHAR(45)    NOT NULL    ,
+     `check_term`        CHAR(1)        NOT NULL    ,
+     `join_date`         DATETIME       NOT NULL    ,
+     `bank_account_seq`  INT            NOT NULL    REFERENCES bank_account(bank_account_seq),
+     PRIMARY KEY (owner_seq)
+ );
+-- restaurant Table Create SQL
+CREATE TABLE restaurant
+(
+    `restaurant_seq`  INT             NOT NULL      AUTO_INCREMENT,
+    `owner_seq`       INT             NOT NULL      REFERENCES owner(owner_seq),
+    `name`            VARCHAR(50)     NULL          ,
+    `description`     VARCHAR(200)    NULL          ,
+    `image`           VARCHAR(100)    NULL          ,
+    `category_seq`    INT             NULL          REFERENCES restaurant_category(category_seq),
+    `start_time`      DATETIME        NULL          ,
+    `end_time`        DATETIME        NULL          ,
+    `rating`          INT             NULL          ,
+    `phone`           VARCHAR(20)     NULL          ,
+    `address_1`       VARCHAR(100)    NULL          ,
+    `address_2`       VARCHAR(100)    NULL          ,
+    `address_3`       VARCHAR(100)    NULL          ,
+    PRIMARY KEY (restaurant_seq)
+);
+-- restaurant_menu Table Create SQL
+CREATE TABLE restaurant_menu
+(
+    `menu_seq`        INT             NOT NULL      AUTO_INCREMENT,
+    `restaurant_seq`  INT             NOT NULL      REFERENCES restaurant(restaurant_seq),
+    `name`            VARCHAR(50)     NULL          ,
+    `image`           VARCHAR(100)    NULL          ,
+    `price`           INT             NULL          ,
+    PRIMARY KEY (menu_seq)
+);
+-- reservation Table Create SQL
+CREATE TABLE reservation
+(
+    `reservation_seq`   INT         NOT NULL        AUTO_INCREMENT,
+    `member_seq`        INT         NOT NULL        ,
+    `restaurant_seq`    INT         NOT NULL        REFERENCES restaurant(restaurant_seq),
+    `reservated_time`   DATETIME    NULL            ,
+    `is_accepted`       CHAR(1)     NULL            ,
+    `reservation_time`  DATETIME    NULL            ,
+    `member_count`      INT         NULL            ,
+    `reserves`          INT         NULL            ,
+    PRIMARY KEY (reservation_seq)
+);
+-- reservation_detail Table Create SQL
+CREATE TABLE reservation_detail
+(
+    `reservation_detail_seq`  INT    NOT NULL       AUTO_INCREMENT,
+    `reservation_seq`         INT    NOT NULL       REFERENCES reservation(reservation_seq),
+    `menu_seq`                INT    NOT NULL       REFERENCES restaurant_menu(menu_seq),
+    `count`                   INT    NULL           ,
+    `price`                   INT    NULL           ,
+    PRIMARY KEY (reservation_detail_seq)
+);
+-- reserves Table Create SQL
+CREATE TABLE reserves
+(
+    `member_seq`          INT             NOT NULL  REFERENCES member(member_seq),
+    `restaurant_seq`      INT             NOT NULL  REFERENCES restaurant(restaurant_seq),
+    `change`              INT             NULL      ,
+    `message`             VARCHAR(200)    NULL      ,
+    `reserves`            INT             NULL      ,
+    `last_modified_date`  DATETIME        NULL      ,
+    PRIMARY KEY (member_seq, restaurant_seq)
+);
+-- restaurant_favorite Table Create SQL
+CREATE TABLE restaurant_favorite
+(
+    `member_seq`      INT    NOT NULL               REFERENCES member(member_seq),
+    `restaurant_seq`  INT    NOT NULL               REFERENCES restaurant(restaurant_seq),
+    PRIMARY KEY (member_seq, restaurant_seq)
+);
+-- restaurant_review Table Create SQL
+CREATE TABLE restaurant_review
+(
+    `review_seq`      INT              NOT NULL     AUTO_INCREMENT,
+    `restaurant_seq`  INT              NOT NULL     REFERENCES restaurant(restaurant_seq),
+    `member_seq`      INT              NOT NULL     REFERENCES member(member_seq),
+    `type`            CHAR(1)          NULL         ,
+    `rating`          INT              NULL         ,
+    `title`           VARCHAR(100)     NULL         ,
+    `content`         VARCHAR(1000)    NULL         ,
+    `reg_time`        DATETIME         NULL         ,
+    PRIMARY KEY (review_seq)
+);
