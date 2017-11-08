@@ -38,7 +38,7 @@ router.post('/info/:id', (req, res)=>{
 				console.log("row.length : " + result.length);
 				if(result.length > 0){
 					res.contentType('application/json');
-					return res.status(200).send(JSON.string(rows[0], null, 4));
+					return res.status(200).send(JSON.stringify(rows[0], null, 4));
 				}
 				else{
 					res.status(400).send("올바른 비밀번호를 입력해주세요");
