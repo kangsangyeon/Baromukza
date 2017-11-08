@@ -27,16 +27,16 @@ router.post('/info/:id', (req, res)=>{
 			return res.status(200).send("해당하는 ID가 없거나 비밀번호가 일치하지 않습니다");
 		}
 		else{
-			db.get().query(sql_getuser, [id, id, password], (err, result)=>{
+			db.get().query(sql_getuser, [id, id, password], (err, rows)=>{
 				console.log("sql_getuser : " + sql_getuser);
 				if(err) {
 					console.log(err.message);
 					return res.sendStatus(400);
 				}
 
-				console.log("rows : " + JSON.stringify(result));
-				console.log("row.length : " + result.length);
-				if(result.length > 0){
+				console.log("rows : " + JSON.stringify(rows[0]));
+				console.log("row.length : " + rows.length);
+				if(rows.length > 0){
 					res.contentType('application/json');
 					return res.status(200).send(JSON.stringify(rows[0], null, 4));
 				}
