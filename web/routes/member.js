@@ -153,6 +153,9 @@ router.put('/info/:id/', (req, res)=>{
 	});
 });
 
+/**
+ * 멤버 정보 삭제
+ */
 router.delete('/info/', (req, res)=>{
 	var id = req.body.id;
 	var password = req.body.password;

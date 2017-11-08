@@ -147,4 +147,25 @@ router.put('/info/:id/', (req, res)=>{
 	});
 });
 
+/**
+ * 점장 정보 삭제
+ */
+router.delete('/info/', (req, res)=>{
+	var id = req.body.id;
+	var password = req.body.password;
+
+	var sql_delete = "DELETE FROM owner " +
+		"WHERE (id=? or email=?) and password=?;";
+	db.get().query(sql_delete, [id, id, password], (err, rows)=>{
+		console.log("sql_delete : " + sql_delete);
+		if(err) {
+			console.log(err.message);
+			return res.sendStatus(400);
+		}
+
+		res.contentType('application/json');
+		return res.status(200).send(JSON.stringify(rows, null, 4));
+	});
+});
+
 module.exports = router;
