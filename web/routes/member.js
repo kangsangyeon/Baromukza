@@ -5,7 +5,7 @@ var db = require('../db');
 /**
  * 멤버 정보 가져오기
  */
-router.post('/info/:id', (req, res)=>{
+router.post('/:id', (req, res)=>{
 	var id = req.params.id;
 	var password = req.body.password;
 
@@ -52,7 +52,7 @@ router.post('/info/:id', (req, res)=>{
 /**
  * 멤버 등록
  */
-router.post('/info/', (req, res)=>{
+router.post('/', (req, res)=>{
 	var id = req.body.id;
 	var password = req.body.password;
 	var name = req.body.name;
@@ -97,7 +97,7 @@ router.post('/info/', (req, res)=>{
 /**
  * 멤버 정보 수정
  */
-router.put('/info/:id/', (req, res)=>{
+router.put('/:id', (req, res)=>{
 	var id = req.params.id;
 	var password = req.body.password;
 
@@ -151,7 +151,7 @@ router.put('/info/:id/', (req, res)=>{
 /**
  * 멤버 정보 삭제
  */
-router.delete('/info/', (req, res)=>{
+router.delete('/', (req, res)=>{
 	var id = req.body.id;
 	var password = req.body.password;
 

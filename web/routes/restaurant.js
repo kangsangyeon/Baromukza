@@ -5,7 +5,7 @@ var db = require('../db');
 /**
  * 레스토랑 정보 요청
  */
-router.get('/info/:restaurant_seq/', (req, res)=>{
+router.get('/:restaurant_seq/', (req, res)=>{
 	var restaurant_seq = req.params.restaurant_seq;
 
 	var sql_select = "SELECT * " +
@@ -31,7 +31,7 @@ router.get('/info/:restaurant_seq/', (req, res)=>{
 /**
  * 레스토랑 정보 등록
  */
-router.post('/info/', (req, res)=>{
+router.post('/', (req, res)=>{
 	var owner_seq = req.body.owner_seq;
 	var name = req.body.name;
 	var description = req.body.description;
@@ -61,7 +61,7 @@ router.post('/info/', (req, res)=>{
 /**
  * 레스토랑 정보 삭제
  */
-router.delete('/info/', (req, res)=>{
+router.delete('/', (req, res)=>{
 	var owner_seq = req.body.owner_seq;
 	var restaurant_seq = req.body.restaurant_seq;
 
@@ -82,7 +82,7 @@ router.delete('/info/', (req, res)=>{
 /**
  * 레스토랑 정보 수정
  */
-router.put('/info/', (req, res)=>{
+router.put('/', (req, res)=>{
 	var restaurant_seq = req.body.restaurant_seq;
 	var owner_seq = req.body.owner_seq;
 	var name = req.body.name;
