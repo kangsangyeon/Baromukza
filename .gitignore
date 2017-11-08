@@ -11,3 +11,4 @@
 .externalNativeBuild
 app/build/android-profile/
 app/build/generated/
+web/node_modules/

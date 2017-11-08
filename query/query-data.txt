@@ -1,0 +1,36 @@
+-- 코드 테이블
+INSERT INTO code_bank(name) VALUES('한국은행');
+INSERT INTO code_bank(name) VALUES('KB국민은행');
+INSERT INTO code_bank(name) VALUES('신한은행');
+INSERT INTO code_bank(name) VALUES('우리은행');
+INSERT INTO code_bank(name) VALUES('KEB하나은행');
+INSERT INTO code_bank(name) VALUES('케이뱅크');
+INSERT INTO code_bank(name) VALUES('카카오뱅크');
+INSERT INTO code_bank(name) VALUES('KDB산업은행');
+INSERT INTO code_bank(name) VALUES('IBK기업은행');
+INSERT INTO code_bank(name) VALUES('한국수출입은행');
+INSERT INTO code_bank(name) VALUES('NH농협은행');
+INSERT INTO code_bank(name) VALUES('수협은행');
+
+-- 점장용 계좌 정보 삽입
+INSERT INTO bank_account(bank_seq, account) VALUES(7, '0707070707');  -- 카카오뱅크 계좌
+INSERT INTO bank_account(bank_seq, account) VALUES(4, '040404040');   -- 우리은행 계좌
+
+-- 점장 정보 삽입
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner_1', 'baromukza', '나사장', '010-1234-9876', 'nasazang@gmail.com', 1);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('jikon1122', 'baromukza', '김지곤', '010-9751-9845', 'jikon1122@gmail.com', 2);
+
+-- 회원 정보 삽입
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('ksyline1997', 'baromukza', '강상연', '1997-11-07', 'm', '010-5008-6287', 'ksyline1997@gmail.com');
+
+-- 레스토랑 정보 삽입
+INSERT INTO restaurant(owner_seq, name, description, image, category_seq, start_time, end_time, phone, address_1, address_2, address_3)
+    VALUES(1, '어느 음식점의 이름', '한국의, 한국에 의한, 한국을 위한 어느 음식점입니다', '', '1', '11:00:00', '22:00:00', '010-5555-5235', '서울시', '어딘가인데', '어딘진 모르겟다');
+
+-- 
+
+
+-- 회원 정보 검색(id 유무)
+SELECT count(*) AS cnt FROM member WHERE id='강상연';
+-- 회원 정보 검색
+SELECT * FROM member WHERE (id='ksyline1997' or email='ksyline1997') and password='baromukza';

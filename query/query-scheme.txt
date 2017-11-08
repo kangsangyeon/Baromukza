@@ -17,8 +17,8 @@ CREATE TABLE code_bank
 CREATE TABLE bank_account
 (
     `bank_account_seq`  INT            NOT NULL     AUTO_INCREMENT,
-    `bank_seq`            INT            NULL       REFERENCES code_bank(bank_seq),
-    `account`             VARCHAR(45)    NULL       ,
+    `bank_seq`          INT            NULL         REFERENCES code_bank(bank_seq),
+    `account`           VARCHAR(45)    NULL         ,
     PRIMARY KEY (bank_account_seq)
 );
 -- restaurant_category Table Create SQL
@@ -41,11 +41,10 @@ CREATE TABLE restaurant_category
      `birth`               DATE            NOT NULL   ,
      `gender`              CHAR(1)         NOT NULL   ,
      `phone`               VARCHAR(20)     NOT NULL   ,
-     `image`               VARCHAR(100)    NOT NULL   ,
+     `image`               VARCHAR(100)    NULL       ,
      `email`               VARCHAR(45)     NOT NULL   ,
-     `check_term`          CHAR(1)         NOT NULL   ,
-     `refund_account_seq`  INT             NULL       REFERENCES bank_account(bank_account_seq),
-     `join_date`           DATETIME        NOT NULL   ,
+     `bank_account_seq`    INT             NULL       REFERENCES bank_account(bank_account_seq),
+     `join_date`           DATETIME        NOT NULL   DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (member_seq)
  );
  -- owner Table Create SQL
@@ -57,9 +56,8 @@ CREATE TABLE restaurant_category
      `name`              VARCHAR(20)    NOT NULL    ,
      `phone`             VARCHAR(20)    NOT NULL    ,
      `email`             VARCHAR(45)    NOT NULL    ,
-     `check_term`        CHAR(1)        NOT NULL    ,
-     `join_date`         DATETIME       NOT NULL    ,
      `bank_account_seq`  INT            NOT NULL    REFERENCES bank_account(bank_account_seq),
+     `join_date`         DATETIME       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (owner_seq)
  );
 -- restaurant Table Create SQL
@@ -71,8 +69,8 @@ CREATE TABLE restaurant
     `description`     VARCHAR(200)    NULL          ,
     `image`           VARCHAR(100)    NULL          ,
     `category_seq`    INT             NULL          REFERENCES restaurant_category(category_seq),
-    `start_time`      DATETIME        NULL          ,
-    `end_time`        DATETIME        NULL          ,
+    `start_time`      TIME            NULL          ,
+    `end_time`        TIME            NULL          ,
     `rating`          INT             NULL          ,
     `phone`           VARCHAR(20)     NULL          ,
     `address_1`       VARCHAR(100)    NULL          ,
