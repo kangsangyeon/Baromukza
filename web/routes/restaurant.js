@@ -2,11 +2,6 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
 /**
  * 레스토랑 정보 요청
  */
