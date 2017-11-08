@@ -12,6 +12,15 @@ INSERT INTO code_bank(name) VALUES('한국수출입은행');
 INSERT INTO code_bank(name) VALUES('NH농협은행');
 INSERT INTO code_bank(name) VALUES('수협은행');
 
+INSERT INTO restaurant_category(name) VALUES('한식');
+INSERT INTO restaurant_category(name) VALUES('중식');
+INSERT INTO restaurant_category(name) VALUES('일식');
+INSERT INTO restaurant_category(name) VALUES('개기일식');
+INSERT INTO restaurant_category(name) VALUES('양식');
+INSERT INTO restaurant_category(name) VALUES('보양식');
+
+
+
 -- 점장용 계좌 정보 삽입
 INSERT INTO bank_account(bank_seq, account) VALUES(7, '0707070707');  -- 카카오뱅크 계좌
 INSERT INTO bank_account(bank_seq, account) VALUES(4, '040404040');   -- 우리은행 계좌
@@ -27,7 +36,8 @@ INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('ksyl
 INSERT INTO restaurant(owner_seq, name, description, image, category_seq, start_time, end_time, phone, address_1, address_2, address_3)
     VALUES(1, '어느 음식점의 이름', '한국의, 한국에 의한, 한국을 위한 어느 음식점입니다', '', '1', '11:00:00', '22:00:00', '010-5555-5235', '서울시', '어딘가인데', '어딘진 모르겟다');
 
--- 
+-- 레스토랑 메뉴 정보 삽입
+INSERT INTO restaurant_menu(restaurant_seq, name, image, price) VALUES(1, '로제파스타', '', 8000);
 
 
 -- 회원 정보 검색(id 유무)
