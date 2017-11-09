@@ -17,9 +17,13 @@ CREATE TABLE code_bank
 CREATE TABLE bank_account
 (
     `bank_account_seq`  INT            NOT NULL     AUTO_INCREMENT,
-    `bank_seq`          INT            NULL         REFERENCES code_bank(bank_seq),
+    `bank_seq`          INT            NULL         ,
     `account`           VARCHAR(45)    NULL         ,
-    PRIMARY KEY (bank_account_seq)
+    PRIMARY KEY (bank_account_seq),
+    CONSTRAINT `fk_bank_seq`
+        FOREIGN KEY (`bank_seq`) REFERENCES `code_bank` (`bank_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 -- restaurant_category Table Create SQL
 CREATE TABLE restaurant_category
@@ -43,9 +47,13 @@ CREATE TABLE restaurant_category
      `phone`               VARCHAR(20)     NOT NULL   ,
      `image`               VARCHAR(100)    NULL       ,
      `email`               VARCHAR(45)     NOT NULL   ,
-     `bank_account_seq`    INT             NULL       REFERENCES bank_account(bank_account_seq),
+     `bank_account_seq`    INT             NULL       ,
      `join_date`           DATETIME        NOT NULL   DEFAULT CURRENT_TIMESTAMP,
-     PRIMARY KEY (member_seq)
+     PRIMARY KEY (member_seq),
+     CONSTRAINT `fk_member_bank_account_seq`
+        FOREIGN KEY (`bank_account_seq`) REFERENCES `bank_account` (`bank_account_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
  );
  -- owner Table Create SQL
  CREATE TABLE owner
@@ -56,19 +64,23 @@ CREATE TABLE restaurant_category
      `name`              VARCHAR(20)    NOT NULL    ,
      `phone`             VARCHAR(20)    NOT NULL    ,
      `email`             VARCHAR(45)    NOT NULL    ,
-     `bank_account_seq`  INT            NOT NULL    REFERENCES bank_account(bank_account_seq),
+     `bank_account_seq`  INT            NOT NULL    ,
      `join_date`         DATETIME       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
-     PRIMARY KEY (owner_seq)
+     PRIMARY KEY (owner_seq),
+     CONSTRAINT `fk_owner_bank_account_seq`
+        FOREIGN KEY (`bank_account_seq`) REFERENCES `bank_account` (`bank_account_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
  );
 -- restaurant Table Create SQL
 CREATE TABLE restaurant
 (
     `restaurant_seq`  INT             NOT NULL      AUTO_INCREMENT,
-    `owner_seq`       INT             NOT NULL      REFERENCES owner(owner_seq),
+    `owner_seq`       INT             NOT NULL      ,
     `name`            VARCHAR(50)     NULL          ,
     `description`     VARCHAR(200)    NULL          ,
     `image`           VARCHAR(100)    NULL          ,
-    `category_seq`    INT             NULL          REFERENCES restaurant_category(category_seq),
+    `category_seq`    INT             NULL          ,
     `start_time`      TIME            NULL          ,
     `end_time`        TIME            NULL          ,
     `rating`          INT             NULL          ,
@@ -76,69 +88,113 @@ CREATE TABLE restaurant
     `address_1`       VARCHAR(100)    NULL          ,
     `address_2`       VARCHAR(100)    NULL          ,
     `address_3`       VARCHAR(100)    NULL          ,
-    PRIMARY KEY (restaurant_seq)
+    PRIMARY KEY (restaurant_seq),
+    CONSTRAINT `fk_restaurant_category_seq`
+       FOREIGN KEY (`category_seq`) REFERENCES `restaurant_category` (`category_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE
 );
 -- restaurant_menu Table Create SQL
 CREATE TABLE restaurant_menu
 (
     `menu_seq`        INT             NOT NULL      AUTO_INCREMENT,
-    `restaurant_seq`  INT             NOT NULL      REFERENCES restaurant(restaurant_seq),
+    `restaurant_seq`  INT             NOT NULL      ,
     `name`            VARCHAR(50)     NULL          ,
     `image`           VARCHAR(100)    NULL          ,
     `price`           INT             NULL          ,
-    PRIMARY KEY (menu_seq)
+    PRIMARY KEY (menu_seq),
+    CONSTRAINT `fk_menu_restaurant_seq`
+       FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE
 );
 -- reservation Table Create SQL
 CREATE TABLE reservation
 (
     `reservation_seq`   INT         NOT NULL        AUTO_INCREMENT,
     `member_seq`        INT         NOT NULL        ,
-    `restaurant_seq`    INT         NOT NULL        REFERENCES restaurant(restaurant_seq),
+    `restaurant_seq`    INT         NOT NULL        ,
     `reservated_time`   DATETIME    NULL            ,
     `is_accepted`       CHAR(1)     NULL            ,
     `reservation_time`  DATETIME    NULL            ,
     `member_count`      INT         NULL            ,
     `reserves`          INT         NULL            ,
-    PRIMARY KEY (reservation_seq)
+    PRIMARY KEY (reservation_seq),
+    CONSTRAINT `fk_reservation_restaurant_seq`
+       FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE
 );
 -- reservation_detail Table Create SQL
 CREATE TABLE reservation_detail
 (
     `reservation_detail_seq`  INT    NOT NULL       AUTO_INCREMENT,
-    `reservation_seq`         INT    NOT NULL       REFERENCES reservation(reservation_seq),
-    `menu_seq`                INT    NOT NULL       REFERENCES restaurant_menu(menu_seq),
+    `reservation_seq`         INT    NOT NULL       ,
+    `menu_seq`                INT    NOT NULL       ,
     `count`                   INT    NULL           ,
     `price`                   INT    NULL           ,
-    PRIMARY KEY (reservation_detail_seq)
+    PRIMARY KEY (reservation_detail_seq),
+    CONSTRAINT `fk_reservation_detail_reservation_seq`
+       FOREIGN KEY (`reservation_seq`) REFERENCES `reservation` (`reservation_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE,
+     CONSTRAINT `fk_menu_seq`
+        FOREIGN KEY (`menu_seq`) REFERENCES `restaurant_menu` (`menu_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 -- reserves Table Create SQL
 CREATE TABLE reserves
 (
-    `member_seq`          INT             NOT NULL  REFERENCES member(member_seq),
-    `restaurant_seq`      INT             NOT NULL  REFERENCES restaurant(restaurant_seq),
+    `member_seq`          INT             NOT NULL  ,
+    `restaurant_seq`      INT             NOT NULL  ,
     `change`              INT             NULL      ,
     `message`             VARCHAR(200)    NULL      ,
     `reserves`            INT             NULL      ,
     `last_modified_date`  DATETIME        NULL      ,
-    PRIMARY KEY (member_seq, restaurant_seq)
+    PRIMARY KEY (member_seq, restaurant_seq),
+    CONSTRAINT `fk_reserves_member_seq`
+       FOREIGN KEY (`member_seq`) REFERENCES `member` (`member_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE,
+     CONSTRAINT `fk_reserves_restaurant_seq`
+        FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 -- restaurant_favorite Table Create SQL
 CREATE TABLE restaurant_favorite
 (
-    `member_seq`      INT    NOT NULL               REFERENCES member(member_seq),
-    `restaurant_seq`  INT    NOT NULL               REFERENCES restaurant(restaurant_seq),
-    PRIMARY KEY (member_seq, restaurant_seq)
+    `member_seq`      INT    NOT NULL               ,
+    `restaurant_seq`  INT    NOT NULL               ,
+    PRIMARY KEY (member_seq, restaurant_seq),
+    CONSTRAINT `fk_favorite_member_seq`
+       FOREIGN KEY (`member_seq`) REFERENCES `member` (`member_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE,
+     CONSTRAINT `fk_favorite_restaurant_seq`
+        FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 -- restaurant_review Table Create SQL
 CREATE TABLE restaurant_review
 (
     `review_seq`      INT              NOT NULL     AUTO_INCREMENT,
-    `restaurant_seq`  INT              NOT NULL     REFERENCES restaurant(restaurant_seq),
-    `member_seq`      INT              NOT NULL     REFERENCES member(member_seq),
+    `restaurant_seq`  INT              NOT NULL     ,
+    `member_seq`      INT              NOT NULL     ,
     `type`            CHAR(1)          NULL         ,
     `rating`          INT              NULL         ,
     `title`           VARCHAR(100)     NULL         ,
     `content`         VARCHAR(1000)    NULL         ,
     `reg_time`        DATETIME         NULL         ,
-    PRIMARY KEY (review_seq)
+    PRIMARY KEY (review_seq),
+    CONSTRAINT `fk_restaurant_review_restaurant_seq`
+       FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE,
+     CONSTRAINT `fk_restaurant_review_member_seq`
+        FOREIGN KEY (`member_seq`) REFERENCES `member` (`member_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
