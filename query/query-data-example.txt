@@ -40,7 +40,10 @@ INSERT INTO restaurant(owner_seq, name, description, image, category_seq, start_
     VALUES(1, '어느 음식점의 이름', '한국의, 한국에 의한, 한국을 위한 어느 음식점입니다', '', '1', '11:00:00', '22:00:00', '010-5555-5235', '서울시', '어딘가인데', '어딘진 모르겟다');
 
 -- 레스토랑 메뉴 정보 삽입
-INSERT INTO restaurant_menu(restaurant_seq, name, image, price) VALUES(1, '로제파스타', '', 8000);
+INSERT INTO restaurant_menu(restaurant_seq, name, image, price) VALUES(2, '로제파스타', '', 8000);
+
+-- 즐겨찾기 정보 삽입
+INSERT INTO restaurant_favorite(member_seq, restaurant_seq) VALUES(1, 1);
 
 
 -- 회원 정보 검색(id 유무)
