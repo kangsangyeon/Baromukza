@@ -30,12 +30,12 @@ router.post('/:member_seq/', (req, res)=>{
 	var member_seq = req.params.member_seq;
 	var restaurant_seq = req.body.restaurant_seq;
 
-	var sql_count = "SELECT count(*) AS cnt " +
+	var sql_count = "SELECT * " +
 		"FROM restaurant_favorite " +
-		"WHERE member_seq=?;";
+		"WHERE member_seq=? AND restaurant_seq=?;";
 	var sql_insert = "INSERT INTO restaurant_favorite(member_seq, restaurant_seq) " +
 		"VALUES(?, ?);";
-	db.get().query(sql_count, [member_seq], (err, rows)=>{
+	db.get().query(sql_count, [member_seq, restaurant_seq], (err, rows)=>{
 		console.log("sql_count : " + sql_count);
 		if(err) {
 			console.log(err.message);
@@ -43,7 +43,8 @@ router.post('/:member_seq/', (req, res)=>{
 		}
 
 		if(rows[0].cnt > 0){
-			return res.status(200);
+			res.contentType('application/json');
+			return res.status(200).send(JSON.stringify(rows[0], null, 4));
 		}
 		else{
 
@@ -62,6 +63,23 @@ router.post('/:member_seq/', (req, res)=>{
 	});
 });
 
-router.delete('/:member_seq')
+router.delete('/:member_seq', (req, res)=>{
+	var member_seq = req.params.member_seq;
+	var restaurant_seq = req.body.restaurant_seq;
+
+	var sql_delete = "DELETE FROM restaurant_favorite " +
+		"WHERE member_seq=? and restaurant_seq=?;";
+	db.get().query(sql_delete, [member_seq, restaurant_seq], (err, rows)=>{
+		console.log("sql_delete : " + sql_delete);
+		if(err) {
+			console.log(err.message);
+			return res.sendStatus(400);
+		}
+
+		res.contentType('application/json');
+		return res.status(200).send(JSON.stringify(rows, null, 4));
+
+	});
+});
 
 module.exports = router;
