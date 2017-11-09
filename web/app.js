@@ -6,8 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var db = require('./db');
 
-// 회원관리, 선불결제, 후기/평점, 예약요청, 예약처리, 즐겨찾기처리, 매장관리,
-// 회원
+
+/**
+ * 라우트 모듈 불러오기
+ */
 var index = require('./routes/index');
 var member = require('./routes/member');
 var owner = require('./routes/owner');
@@ -31,6 +33,9 @@ db.connect((err)=>{
 	}
 });
 
+/**
+ * 라우트 추가
+ */
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));

@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('../db');
 
 /**
- * 멤버 정보 가져오기
+ * 멤버 정보 요청
  */
 router.post('/:id', (req, res)=>{
 	var id = req.params.id;
@@ -50,7 +50,7 @@ router.post('/:id', (req, res)=>{
 });
 
 /**
- * 멤버 등록
+ * 멤버 정보 등록
  */
 router.post('/', (req, res)=>{
 	var id = req.body.id;

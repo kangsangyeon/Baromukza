@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('../db');
 
 /**
- * 멤버 즐겨찾기 목록 요청
+ * 특정 멤버의 즐겨찾기 목록 요청
  */
 router.get('/:member_seq/', (req, res)=>{
 	var member_seq = req.params.member_seq;
@@ -63,6 +63,9 @@ router.post('/:member_seq/', (req, res)=>{
 	});
 });
 
+/**
+ * 즐겨찾기 삭제
+ */
 router.delete('/:member_seq', (req, res)=>{
 	var member_seq = req.params.member_seq;
 	var restaurant_seq = req.body.restaurant_seq;
