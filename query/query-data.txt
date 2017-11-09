@@ -1,4 +1,5 @@
 -- 코드 테이블
+-- 은행 코드 테이블
 INSERT INTO code_bank(name) VALUES('한국은행');
 INSERT INTO code_bank(name) VALUES('KB국민은행');
 INSERT INTO code_bank(name) VALUES('신한은행');
@@ -12,12 +13,14 @@ INSERT INTO code_bank(name) VALUES('한국수출입은행');
 INSERT INTO code_bank(name) VALUES('NH농협은행');
 INSERT INTO code_bank(name) VALUES('수협은행');
 
+-- 레스토랑 카테고리 테이블
 INSERT INTO restaurant_category(name) VALUES('한식');
 INSERT INTO restaurant_category(name) VALUES('중식');
 INSERT INTO restaurant_category(name) VALUES('일식');
 INSERT INTO restaurant_category(name) VALUES('개기일식');
 INSERT INTO restaurant_category(name) VALUES('양식');
 INSERT INTO restaurant_category(name) VALUES('보양식');
+INSERT INTO restaurant_category(name) VALUES('갖고싶은건 빼앗는다 그게 우리의 방식');
 
 
 
