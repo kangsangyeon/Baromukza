@@ -148,8 +148,6 @@ CREATE TABLE reserves
 (
     `member_seq`          INT             NOT NULL  ,
     `restaurant_seq`      INT             NOT NULL  ,
-    `change`              INT             NULL      ,
-    `message`             VARCHAR(200)    NULL      ,
     `reserves`            INT             NULL      ,
     `last_modified_date`  DATETIME        NULL      ,
     PRIMARY KEY (member_seq, restaurant_seq),
