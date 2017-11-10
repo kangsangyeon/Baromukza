@@ -13,5 +13,4 @@ public class ReservationDetailInfoItem {
     @SerializedName("menu_seq")                     public int menuSeq;
     @SerializedName("count")                        public int count;
     @SerializedName("price")                        public int price;
-    
 }
