@@ -7,7 +7,7 @@ exports.connect = ()=>{
 		connectionLimit: 100,
 		host	: 'localhost',
 		user	: 'root',
-		password: 'kangsy9797',
+		password: 'password',
 		database: 'baromukza'
 	});
 }
