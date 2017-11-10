@@ -6,8 +6,8 @@ USE baromukza;
 
 
 -- 코드 테이블
--- code_bank Table Create SQL
-CREATE TABLE code_bank
+-- bank_code Table Create SQL
+CREATE TABLE bank_code
 (
     `bank_seq`  INT            NOT NULL             AUTO_INCREMENT,
     `name`      VARCHAR(20)    NULL                 ,
@@ -21,7 +21,7 @@ CREATE TABLE bank_account
     `account`           VARCHAR(45)    NULL         ,
     PRIMARY KEY (bank_account_seq),
     CONSTRAINT `fk_bank_seq`
-        FOREIGN KEY (`bank_seq`) REFERENCES `code_bank` (`bank_seq`)
+        FOREIGN KEY (`bank_seq`) REFERENCES `bank_code` (`bank_seq`)
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
