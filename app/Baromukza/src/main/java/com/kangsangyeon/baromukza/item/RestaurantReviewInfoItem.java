@@ -15,4 +15,18 @@ public class RestaurantReviewInfoItem {
     @SerializedName("title")                public String title;
     @SerializedName("content")              public String content;
     @SerializedName("reg_time")             public String regTime;
+
+    @Override
+    public String toString() {
+        return "RestaurantReviewInfoItem{" +
+                "seq=" + seq +
+                ", restaurant_seq=" + restaurant_seq +
+                ", member_seq=" + member_seq +
+                ", type='" + type + '\'' +
+                ", rating=" + rating +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", regTime='" + regTime + '\'' +
+                '}';
+    }
 }

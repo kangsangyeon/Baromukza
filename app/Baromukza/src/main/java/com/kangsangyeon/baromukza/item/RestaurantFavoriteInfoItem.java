@@ -10,4 +10,12 @@ public class RestaurantFavoriteInfoItem {
 
     @SerializedName("member_seq")           public int memberSeq;
     @SerializedName("restaurant_seq")       public int restaurantSeq;
+
+    @Override
+    public String toString() {
+        return "RestaurantFavoriteInfoItem{" +
+                "memberSeq=" + memberSeq +
+                ", restaurantSeq=" + restaurantSeq +
+                '}';
+    }
 }

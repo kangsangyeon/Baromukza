@@ -21,4 +21,23 @@ public class RestaurantInfoItem {
     @SerializedName("address_1")            public String address1;
     @SerializedName("address_2")            public String address2;
     @SerializedName("address_3")            public String address3;
+
+    @Override
+    public String toString() {
+        return "RestaurantInfoItem{" +
+                "seq=" + seq +
+                ", ownerSeq=" + ownerSeq +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", categorySeq=" + categorySeq +
+                ", startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
+                ", rating=" + rating +
+                ", phone='" + phone + '\'' +
+                ", address1='" + address1 + '\'' +
+                ", address2='" + address2 + '\'' +
+                ", address3='" + address3 + '\'' +
+                '}';
+    }
 }

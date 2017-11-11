@@ -12,4 +12,15 @@ public class RestaurantMenuInfoItem {
     @SerializedName("name")                 public String name;
     @SerializedName("image")                public String image;
     @SerializedName("price")                public int price;
+
+    @Override
+    public String toString() {
+        return "RestaurantMenuInfoItem{" +
+                "seq=" + seq +
+                ", restaurantSeq=" + restaurantSeq +
+                ", name='" + name + '\'' +
+                ", image='" + image + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

@@ -16,4 +16,18 @@ public class ReservationInfoItem {
     @SerializedName("reservation_time")     public String reservationTime;
     @SerializedName("member_count")         public int memberCount;
     @SerializedName("reserves")             public int reserves;
+
+    @Override
+    public String toString() {
+        return "ReservationInfoItem{" +
+                "seq=" + seq +
+                ", member_seq=" + member_seq +
+                ", restaurant_seq=" + restaurant_seq +
+                ", reservatedTime='" + reservatedTime + '\'' +
+                ", isAccepted='" + isAccepted + '\'' +
+                ", reservationTime='" + reservationTime + '\'' +
+                ", memberCount=" + memberCount +
+                ", reserves=" + reserves +
+                '}';
+    }
 }

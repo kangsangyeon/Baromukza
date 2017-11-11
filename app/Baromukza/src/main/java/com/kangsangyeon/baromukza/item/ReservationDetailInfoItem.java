@@ -13,4 +13,15 @@ public class ReservationDetailInfoItem {
     @SerializedName("menu_seq")                     public int menuSeq;
     @SerializedName("count")                        public int count;
     @SerializedName("price")                        public int price;
+
+    @Override
+    public String toString() {
+        return "ReservationDetailInfoItem{" +
+                "seq=" + seq +
+                ", reservationSeq=" + reservationSeq +
+                ", menuSeq=" + menuSeq +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

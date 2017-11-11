@@ -20,4 +20,20 @@ public class MemberInfoItem {
     @SerializedName("bank_account_seq")     public int bankAccountSeq;
     @SerializedName("join_date")            public String joinDate;
 
+    @Override
+    public String toString() {
+        return "MemberInfoItem{" +
+                "seq=" + seq +
+                ", id='" + id + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", birth='" + birth + '\'' +
+                ", gender='" + gender + '\'' +
+                ", phone='" + phone + '\'' +
+                ", image='" + image + '\'' +
+                ", email='" + email + '\'' +
+                ", bankAccountSeq=" + bankAccountSeq +
+                ", joinDate='" + joinDate + '\'' +
+                '}';
+    }
 }

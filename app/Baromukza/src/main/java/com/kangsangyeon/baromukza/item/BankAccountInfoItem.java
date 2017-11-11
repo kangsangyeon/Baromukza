@@ -11,4 +11,13 @@ public class BankAccountInfoItem {
     @SerializedName("bank_account_seq")     public int seq;
     @SerializedName("bank_seq")             public int bankSeq;
     @SerializedName("account")              public String account;
+
+    @Override
+    public String toString() {
+        return "BankAccountInfoItem{" +
+                "seq=" + seq +
+                ", bankSeq=" + bankSeq +
+                ", account='" + account + '\'' +
+                '}';
+    }
 }

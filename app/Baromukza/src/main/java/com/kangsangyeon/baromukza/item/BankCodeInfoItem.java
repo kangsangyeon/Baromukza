@@ -9,4 +9,12 @@ import com.google.gson.annotations.SerializedName;
 public class BankCodeInfoItem {
     @SerializedName("bank_seq")             public int seq;
     @SerializedName("name")                 public String name;
+
+    @Override
+    public String toString() {
+        return "BankCodeInfoItem{" +
+                "seq=" + seq +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
