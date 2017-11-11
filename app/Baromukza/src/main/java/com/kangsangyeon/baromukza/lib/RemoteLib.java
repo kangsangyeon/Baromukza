@@ -5,10 +5,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 
+import com.kangsangyeon.baromukza.remote.RemoteService;
+import com.kangsangyeon.baromukza.remote.ServiceGenerator;
+
 import java.io.File;
 
-import bestfood.kangsangyeon.com.bestfood.remote.RemoteService;
-import bestfood.kangsangyeon.com.bestfood.remote.ServiceGenerator;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;

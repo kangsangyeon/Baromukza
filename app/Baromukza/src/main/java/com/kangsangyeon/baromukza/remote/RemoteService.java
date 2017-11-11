@@ -7,7 +7,6 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -19,31 +18,18 @@ import retrofit2.http.Path;
  */
 public interface RemoteService {
     String BASE_URL = "http://192.168.1.2:3000";
-    String MEMBER_ICON_URL = BASE_URL + "/member/";
-    String IMAGE_URL = BASE_URL + "/img/";
 
     /**
-     * 서버로부터 사용자 정보 반환을 요청하기
-     * @param phone 폰 전화번호
-     * @return 사용자 정보
-     */
-    @GET("/member/{phone}")
-    Call<MemberInfoItem> selectMemberInfo(@Path("phone") String phone);
-
-    /**
-     * 서버에 사용자 정보 등록 요청하기
-     * @param phone 폰 전화번호
-     * @return 결과 String
+     * 서버로부터 멤버 정보 얻어오기
+     * @param id 사용자 ID
+     * @param password 사용자 Password
+     * @return 멤버 정보 객체
      */
     @FormUrlEncoded
-    @POST("/member/phone")
-    Call<String> insertMemberPhone(@Field("phone") String phone);
+    @POST("/member/{id}")
+    Call<MemberInfoItem> selectMemberInfo(@Path("id") String id,
+                                          @Field("password") String password);
 
-    /**
-     * 서버에 사용자 정보 수정하기
-     * @param memberInfoItem
-     * @return
-     */
-    @POST("/member/info")
+    @POST("/member/")
     Call<String> insertMemberInfo(@Body MemberInfoItem memberInfoItem);
 }
