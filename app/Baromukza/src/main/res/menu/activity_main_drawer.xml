@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="마이페이지">
+        <menu>
+            <item
+                android:id="@+id/nav_main_mypage"
+                android:title="마이페이지" />
+            <item
+                android:id="@+id/nav_main_reserve_history"
+                android:title="예약 내역" />
+            <item
+                android:id="@+id/nav_main_reserves"
+                android:title="내 적립금" />
+            <item
+                android:id="@+id/nav_main_favorite"
+                android:title="즐겨찾기" />
+        </menu>
+    </item>
+
+    <item android:title="음식점 바로가기">
+        <menu>
+            <item
+                android:id="@+id/nav_main_recent_seach"
+                android:title="최근 검색" />
+            <item
+                android:id="@+id/nav_main_recent_reservation"
+                android:title="최근 예약" />
+            <item
+                android:id="@+id/nav_main_recent_charge"
+                android:title="최근 충전" />
+        </menu>
+    </item>
+
+</menu>

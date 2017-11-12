@@ -2,5 +2,6 @@
     <string name="app_name">Baromukza</string>
     <string name="app_name_kor">바로먹자</string>
 
-    <string name="d">Baromukza</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
