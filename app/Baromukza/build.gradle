@@ -50,4 +50,12 @@ dependencies {
     compile 'org.parceler:parceler:1.0.0'
 
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    /**
+     * 안드로이드 어-썸한 ui 라이브러리를 모아놓은 깃헙 페이지
+     * https://github.com/wasabeef/awesome-android-ui
+     */
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'jp.wasabeef:picasso-transformations:2.1.2'
+
 }
