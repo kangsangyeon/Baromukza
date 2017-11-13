@@ -3,6 +3,26 @@ var router = express.Router();
 var db = require('../db');
 
 /**
+ * 레스토랑의 목록을 요청
+ * FIXME: 조건에 맞는 레스토랑의 목록을 요청하는 기능을 추후에 추가하자
+ */
+router.get('/list/', (req, res)=>{
+
+	var sql_select = "SELECT * " +
+		"FROM restaurant;"
+	db.get().query(sql_select, [], (err, rows)=>{
+		console.log("sql_select : " + sql_select);
+		if(err) {
+			console.log(err.message);
+			return res.sendStatus(400);
+		}
+
+		res.contentType('application/json');
+		return res.status(200).send(JSON.stringify(rows, null, 4));
+	});
+});
+
+/**
  * 레스토랑 정보 요청
  */
 router.get('/:restaurant_seq/', (req, res)=>{
@@ -115,26 +135,5 @@ router.put('/', (req, res)=>{
 		}
 	});
 });
-
-/**
- * 레스토랑의 목록을 요청
- * FIXME: 조건에 맞는 레스토랑의 목록을 요청하는 기능을 추후에 추가하자
- */
-router.get('/list/', (req, res)=>{
-	
-	var sql_select = "SELECT * " +
-		"FROM restaurant;"
-	db.get().query(sql_select, [], (err, rows)=>{
-		console.log("sql_select : " + sql_select);
-		if(err) {
-			console.log(err.message);
-			return res.sendStatus(400);
-		}
-
-		res.contentType('application/json');
-		return res.status(200).send(JSON.stringify(rows, null, 4));
-	});
-});
-
 
 module.exports = router;
