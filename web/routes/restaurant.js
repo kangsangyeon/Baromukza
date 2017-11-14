@@ -81,9 +81,9 @@ router.post('/', (req, res)=>{
 /**
  * 레스토랑 정보 삭제
  */
-router.delete('/', (req, res)=>{
+router.delete('/:restaurant_seq/', (req, res)=>{
 	var owner_seq = req.body.owner_seq;
-	var restaurant_seq = req.body.restaurant_seq;
+	var restaurant_seq = req.params.restaurant_seq;
 
 	var sql_delete = "DELETE FROM restaurant " +
 		"WHERE owner_seq=? and restaurant_seq=?;";
