@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.0">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/mypage_profile_image"
+            android:id="@+id/nav_header_main_profile_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
@@ -39,8 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_preferences"
-            app:layout_constraintBottom_toBottomOf="@+id/mypage_profile_image"
-            app:layout_constraintRight_toRightOf="@+id/mypage_profile_image" />
+            app:layout_constraintBottom_toBottomOf="@+id/nav_header_main_profile_image"
+            app:layout_constraintRight_toRightOf="@+id/nav_header_main_profile_image" />
 
         <TextView
             android:id="@+id/mypage_profile_name"
@@ -54,7 +54,7 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/nav_header_main_profile_image"
             app:layout_constraintVertical_bias="0.606" />
 
     </android.support.constraint.ConstraintLayout>
@@ -77,10 +77,14 @@
                 android:id="@+id/mypage_myinfo_image"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginStart="8dp"
-                app:srcCompat="?attr/actionModeShareDrawable"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="8dp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeShareDrawable"/>
 
             <TextView
                 android:id="@+id/myinfo_name_text"

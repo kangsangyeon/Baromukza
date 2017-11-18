@@ -24,7 +24,8 @@ import retrofit2.http.Path;
  * 서버에 호출할 메소드를 선언하는 인터페이스
  */
 public interface RemoteService {
-    String BASE_URL = "http://192.168.55.246:3000";
+    String BASE_URL = "http://192.168.1.6:3000";
+
 
     /**
      * 멤버 정보 얻어오기

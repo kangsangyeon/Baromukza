@@ -7,5 +7,5 @@
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#c8e8ff</color>
 
-    <color name="bg_dull_black">#46000000</color>
+    <color name="bg_dull_black">#46ffffff</color>
 </resources>
