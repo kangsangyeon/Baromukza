@@ -22,7 +22,7 @@ import butterknife.OnClick;
  * Created by pc-1 on 2017-11-10.
  */
 
-public class MyInfoActivity extends AppCompatActivity {
+public class MemberMyInfoActivity extends AppCompatActivity {
 
     @BindView(R.id.myinfo_name)
     EditText nameEdit;

@@ -24,7 +24,7 @@ public class MyPageActivity extends AppCompatActivity {
     @OnClick(R.id.mypage_myinfo)
     public void onClickMyInfo(final View view){
         MySnack.show(view, "MyInfo");
-        Intent intent = new Intent(MyPageActivity.this, MyInfoActivity.class);
+        Intent intent = new Intent(MyPageActivity.this, MemberMyInfoActivity.class);
         startActivity(intent);
     }
 

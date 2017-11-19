@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.kangsangyeon.baromukza.adapter.MainViewPagerAdapter;
 import com.kangsangyeon.baromukza.item.MemberInfoItem;
+import com.kangsangyeon.baromukza.item.OwnerInfoItem;
 import com.kangsangyeon.baromukza.lib.MyToast;
 
 import butterknife.BindView;
@@ -84,9 +85,13 @@ public class MainActivity extends AppCompatActivity
 		headerMyInfoButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				if(mMyApp.isLoggedIn() == true){
-					Intent intent = new Intent(MainActivity.this, MyInfoActivity.class);
+				if(mMyApp.isLoggedIn() == true && mMyApp.getLoggedInAs() == UserType.MEMBER){
+					Intent intent = new Intent(MainActivity.this, MemberMyInfoActivity.class);
 					startActivity(intent);
+				}
+				else if(mMyApp.isLoggedIn() == true && mMyApp.getLoggedInAs() == UserType.OWNER){
+//					Intent intent = new Intent(MainActivity.this, MemberMyInfoActivity.class);
+//					startActivity(intent);
 				}
 				else{
 					MyToast.s(MainActivity.this, "로그인이 필요한 서비스입니다");
@@ -95,10 +100,14 @@ public class MainActivity extends AppCompatActivity
 
 			}
 		});
-		if(mMyApp.isLoggedIn() == true){
+		if(mMyApp.isLoggedIn() == true && mMyApp.getLoggedInAs() == UserType.MEMBER){
 			MemberInfoItem currentMemberInfo = mMyApp.CurrentMemberInfo;
 			headerName.setText(currentMemberInfo.name);
 //			headerProfileImage
+		}
+		else if(mMyApp.isLoggedIn() == true && mMyApp.getLoggedInAs() == UserType.OWNER){
+			OwnerInfoItem currentOwnerInfo = mMyApp.CurrentOwnerInfo;
+			headerName.setText(currentOwnerInfo.name);
 		}
 		else{
 			headerName.setText("로그인이 필요합니다");

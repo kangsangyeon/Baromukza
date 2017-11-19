@@ -28,4 +28,20 @@ public class MyApp extends Application {
 		}
 	}
 
+	/**
+	 * 로그인 되어있는 회원의 타입을 반환하는 메소드
+	 * @return 회원 타입
+	 */
+	public UserType getLoggedInAs(){
+		if(CurrentMemberInfo != null){
+			return UserType.MEMBER;
+		}
+		else if(CurrentOwnerInfo != null){
+			return UserType.OWNER;
+		}
+		else{
+			return UserType.UNKNOWN;
+		}
+	}
+
 }

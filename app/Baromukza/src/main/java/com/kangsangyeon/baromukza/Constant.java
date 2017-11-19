@@ -6,4 +6,8 @@ package com.kangsangyeon.baromukza;
 
 public interface Constant {
 	int REQUEST_LOGIN = 100;
+
+}
+enum UserType{
+	MEMBER, OWNER, ADMIN, UNKNOWN
 }
