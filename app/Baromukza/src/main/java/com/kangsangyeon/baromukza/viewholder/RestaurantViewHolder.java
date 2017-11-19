@@ -21,6 +21,7 @@ public class RestaurantViewHolder extends RecyclerView.ViewHolder {
 	@BindView(R.id.cardview) public CardView cardView;
 	@BindView(R.id.image) public ImageView imageView;
 	@BindView(R.id.title) public TextView titleText;
+	@BindView(R.id.content) public TextView contentText;
 
 	RestaurantInfoItem restaurantInfoItem;
 
