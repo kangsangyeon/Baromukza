@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class OwnerInfoItem {
+
     @SerializedName("owner_seq")            public int seq;
     @SerializedName("id")                   public String id;
     @SerializedName("password")             public String password;

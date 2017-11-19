@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
 				@Override
 				public void onFailure(Call<MemberInfoItem> call, Throwable t) {
-					MySnack.show(view, "No Internet Connectivity");
+					MySnack.show(view, "로그인 실패");
 					t.printStackTrace();
 				}
 			});
@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
 
 				@Override
 				public void onFailure(Call<OwnerInfoItem> call, Throwable t) {
-					MySnack.show(view, "No Internet Connectivity");
+					MySnack.show(view, "로그인 실패");
 					t.printStackTrace();
 				}
 			});

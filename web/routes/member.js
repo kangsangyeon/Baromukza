@@ -23,8 +23,8 @@ router.post('/:id', (req, res)=>{
 		}
 
 		if(rows[0].cnt <= 0){
-			console.log("해당하는 ID가 없거나 비밀번호가 일치하지 않습니다");
-			return res.status(200).send("해당하는 ID가 없거나 비밀번호가 일치하지 않습니다");
+			console.log("해당하는 ID가 없습니다.");
+			return res.status(200).send("해당하는 ID가 없습니다.");
 		}
 		else{
 			db.get().query(sql_getuser, [id, id, password], (err, rows)=>{

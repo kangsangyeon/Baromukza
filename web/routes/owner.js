@@ -34,11 +34,11 @@ router.post('/:id/', (req, res)=>{
 					return res.sendStatus(400);
 				}
 
-				console.log("rows : " + JSON.stringify(rows));
+				console.log("rows : " + JSON.stringify(rows[0]));
 				console.log("row.length : " + rows.length);
 				if(rows.length > 0){
 					res.contentType('application/json');
-					res.json(Json.stringify(rows[0], null, 4));
+					return res.status(200).send(JSON.stringify(rows[0], null, 4));
 				}
 				else{
 					res.status(200).send("올바른 비밀번호를 입력해주세요");
