@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
 	ViewPager viewPager;
 
 
-	MemberInfoItem mCurrentMember;
+	MyApp mMyApp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity
 
 		ButterKnife.bind(this, this);
 
-		// 멤버정보 가져오기
-		mCurrentMember = ((MyApp) getApplication()).CurrentMemberInfo;
+		// Application 객체 초기화
+		mMyApp = (MyApp) getApplication();
 
 		// Toolbar 설정
 		setSupportActionBar(toolbar);
@@ -66,11 +66,11 @@ public class MainActivity extends AppCompatActivity
 		TextView headerMyInfoButton = (TextView)navHeaderView.findViewById(R.id.nav_header_myinfo_button);
 
 		// Navigation Menu 설정
-		if (mCurrentMember == null) {
-			navigationView.inflateMenu(R.menu.main_drawer_need_login);
+		if (mMyApp.isLoggedIn() == true) {
+			navigationView.inflateMenu(R.menu.main_drawer);
 		}
 		else {
-			navigationView.inflateMenu(R.menu.main_drawer);
+			navigationView.inflateMenu(R.menu.main_drawer_need_login);
 		}
 		navigationView.setNavigationItemSelectedListener(this);
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
 		headerMyInfoButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				if(mCurrentMember != null){
+				if(mMyApp.isLoggedIn() == true){
 					Intent intent = new Intent(MainActivity.this, MyInfoActivity.class);
 					startActivity(intent);
 				}
@@ -95,8 +95,9 @@ public class MainActivity extends AppCompatActivity
 
 			}
 		});
-		if(mCurrentMember != null){
-			headerName.setText(mCurrentMember.name);
+		if(mMyApp.isLoggedIn() == true){
+			MemberInfoItem currentMemberInfo = mMyApp.CurrentMemberInfo;
+			headerName.setText(currentMemberInfo.name);
 //			headerProfileImage
 		}
 		else{
