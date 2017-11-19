@@ -82,7 +82,7 @@ public class MyInfoActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        MemberInfoItem memberInfoItem = ((MyApp) getApplication()).memberInfoItem;
+        MemberInfoItem memberInfoItem = ((MyApp) getApplication()).CurrentMemberInfo;
         setView(memberInfoItem);
     }
 

@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
 
 				if(response.isSuccessful()){
 					MyToast.l(LoginActivity.this, item.toString());
-					((MyApp)getApplication()).memberInfoItem = item;
+					((MyApp)getApplication()).CurrentMemberInfo = item;
 
 					setResult(Activity.RESULT_OK);
 					finish();

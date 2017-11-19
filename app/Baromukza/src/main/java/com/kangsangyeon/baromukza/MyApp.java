@@ -10,6 +10,6 @@ import com.kangsangyeon.baromukza.item.MemberInfoItem;
 
 public class MyApp extends Application {
 
-    public MemberInfoItem memberInfoItem;
+    public MemberInfoItem CurrentMemberInfo;
 
 }

@@ -12,6 +12,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.kangsangyeon.baromukza.adapter.MainViewPagerAdapter;
 import com.kangsangyeon.baromukza.item.MemberInfoItem;
@@ -19,6 +21,7 @@ import com.kangsangyeon.baromukza.lib.MyToast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,12 +37,18 @@ public class MainActivity extends AppCompatActivity
 	@BindView(R.id.main_viewpager)
 	ViewPager viewPager;
 
+
+	MemberInfoItem mCurrentMember;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
 		ButterKnife.bind(this, this);
+
+		// 멤버정보 가져오기
+		mCurrentMember = ((MyApp) getApplication()).CurrentMemberInfo;
 
 		// Toolbar 설정
 		setSupportActionBar(toolbar);
@@ -50,22 +59,49 @@ public class MainActivity extends AppCompatActivity
 		drawer.addDrawerListener(toggle);
 		toggle.syncState();
 
+		// Bind Navigation Layout Header's Child Views
+		View navHeaderView = navigationView.getHeaderView(0);
+		TextView headerName = (TextView)navHeaderView.findViewById(R.id.nav_header_name);
+		CircleImageView headerProfileImage = (CircleImageView)navHeaderView.findViewById(R.id.nav_header_main_profile_image);
+		TextView headerMyInfoButton = (TextView)navHeaderView.findViewById(R.id.nav_header_myinfo_button);
+
 		// Navigation Menu 설정
-		MemberInfoItem currentMemberInfoItem = ((MyApp) getApplication()).memberInfoItem;
-		if (currentMemberInfoItem == null) {
+		if (mCurrentMember == null) {
 			navigationView.inflateMenu(R.menu.main_drawer_need_login);
 		}
 		else {
 			navigationView.inflateMenu(R.menu.main_drawer);
 		}
-
-		// Navigation View 설정
 		navigationView.setNavigationItemSelectedListener(this);
 
 		// Tab Layout과 View Pager 설정
 		MainViewPagerAdapter adapter = new MainViewPagerAdapter(getSupportFragmentManager());
 		viewPager.setAdapter(adapter);
 		tabLayout.setupWithViewPager(viewPager);
+
+		// Navigation 의 상단 헤더 초기화
+		// TODO: 이미지 리소스 뜨게 변경할 것
+		headerMyInfoButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if(mCurrentMember != null){
+					Intent intent = new Intent(MainActivity.this, MyInfoActivity.class);
+					startActivity(intent);
+				}
+				else{
+					MyToast.s(MainActivity.this, "로그인이 필요한 서비스입니다");
+					goLoginActivity();
+				}
+
+			}
+		});
+		if(mCurrentMember != null){
+			headerName.setText(mCurrentMember.name);
+//			headerProfileImage
+		}
+		else{
+			headerName.setText("로그인이 필요합니다");
+		}
 	}
 
 	@Override
@@ -142,4 +178,5 @@ public class MainActivity extends AppCompatActivity
 		Intent intent = new Intent(MainActivity.this, MainActivity.class);
 		startActivity(intent);
 	}
+
 }
