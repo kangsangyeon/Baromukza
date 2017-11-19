@@ -43,7 +43,7 @@ public class MainSearchFragment extends Fragment {
 
 		ButterKnife.bind(this, rootView);
 
-		LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+		LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
 		recyclerView.setHasFixedSize(true);
 		recyclerView.setLayoutManager(layoutManager);
 
@@ -56,7 +56,7 @@ public class MainSearchFragment extends Fragment {
 				ArrayList<RestaurantInfoItem> items = response.body();
 
 				if (items != null) {
-					recyclerView.setAdapter(new MainSearchRecyclerAdapter(getActivity(), items, R.layout.activity_main));
+					recyclerView.setAdapter(new MainSearchRecyclerAdapter(getActivity(), items));
 				}
 				else {
 					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
@@ -65,7 +65,7 @@ public class MainSearchFragment extends Fragment {
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "No Internet Connectivity");
+				MySnack.show(rootView, "데이터를 가져오는 데 실패하였습니다.");
 				t.printStackTrace();
 			}
 		});

@@ -4,6 +4,7 @@ package com.kangsangyeon.baromukza.remote;
 import com.kangsangyeon.baromukza.item.MemberInfoItem;
 import com.kangsangyeon.baromukza.item.OwnerInfoItem;
 import com.kangsangyeon.baromukza.item.RestaurantInfoItem;
+import com.kangsangyeon.baromukza.item.RestaurantMenuInfoItem;
 
 import java.util.ArrayList;
 
@@ -155,5 +156,12 @@ public interface RemoteService {
      */
     @GET("/restaurant/list")
     Call<ArrayList<RestaurantInfoItem>> selectRestaurantInfoList();
+
+	/**
+	 * 전체 메뉴 정보 리스트 얻어오기
+	 * @return 전체 메뉴 정보 ArrayList
+	 */
+	@GET("/menu/list")
+	Call<ArrayList<RestaurantMenuInfoItem>> selectRestaurantMenuInfoList();
 
 }

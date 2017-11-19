@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.kangsangyeon.baromukza.R;
-import com.kangsangyeon.baromukza.item.RestaurantInfoItem;
+import com.kangsangyeon.baromukza.item.RestaurantMenuInfoItem;
 import com.kangsangyeon.baromukza.viewholder.RestaurantViewHolder;
 
 import java.util.List;
@@ -17,18 +17,18 @@ import java.util.List;
  * Created by pc-1 on 2017-11-13.
  */
 
-public class MainSearchRecyclerAdapter extends RecyclerView.Adapter<RestaurantViewHolder> {
+public class MainRecommendRecyclerAdapter extends RecyclerView.Adapter<RestaurantViewHolder> {
 	Context mContext;
-	List<RestaurantInfoItem> items;
+	List<RestaurantMenuInfoItem> items;
 
-	public MainSearchRecyclerAdapter(Context context, List<RestaurantInfoItem> items) {
+	public MainRecommendRecyclerAdapter(Context context, List<RestaurantMenuInfoItem> items) {
 		this.mContext = context;
 		this.items = items;
 	}
 
 	@Override
 	public RestaurantViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-		View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_1, null);
+		View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_2, null);
 
 		return new RestaurantViewHolder(v);
 	}
@@ -36,11 +36,11 @@ public class MainSearchRecyclerAdapter extends RecyclerView.Adapter<RestaurantVi
 	@Override
 	public void onBindViewHolder(RestaurantViewHolder holder, int position) {
 		try{
-			final RestaurantInfoItem item = items.get(position);
+			final RestaurantMenuInfoItem item = items.get(position);
 //			Drawable drawable = RemoteLib.drawableFromUrl(mContext, item.image);
 //			holder.imageView.setBackground(drawable);
 			holder.titleText.setText(item.name);
-			holder.contentText.setText(item.description);
+			holder.contentText.setText(item.price + "원");
 			holder.cardView.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
