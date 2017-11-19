@@ -36,7 +36,8 @@
                     android:id="@+id/login_usertype_member"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="손님(예약하는사람)" />
+                    android:checked="true"
+                    android:text="손님(예약하는사람)"/>
 
                 <RadioButton
                     android:id="@+id/login_usertype_owner"

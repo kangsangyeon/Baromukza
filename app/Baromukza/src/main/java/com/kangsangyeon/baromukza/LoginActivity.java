@@ -6,8 +6,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import com.kangsangyeon.baromukza.item.MemberInfoItem;
+import com.kangsangyeon.baromukza.item.OwnerInfoItem;
 import com.kangsangyeon.baromukza.lib.MySnack;
 import com.kangsangyeon.baromukza.lib.MyToast;
 import com.kangsangyeon.baromukza.remote.RemoteService;
@@ -26,6 +28,8 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
+	@BindView(R.id.login_usertype)
+	RadioGroup userTypeGroup;
 	@BindView(R.id.login_id)
 	EditText idEdit;
 	@BindView(R.id.login_password)
@@ -33,32 +37,61 @@ public class LoginActivity extends AppCompatActivity {
 
 	@OnClick(R.id.login_login_btn)
 	public void onClickLogin(final View view){
+		int userTypeRadioId = userTypeGroup.getCheckedRadioButtonId();
 		String id = idEdit.getText().toString();
 		String password = passwordEdit.getText().toString();
 
-		RemoteService remoteService = ServiceGenerator.createService(RemoteService.class);
-		Call<MemberInfoItem> call = remoteService.selectMemberInfo(id, password);
-		call.enqueue(new Callback<MemberInfoItem>() {
-			@Override
-			public void onResponse(Call<MemberInfoItem> call, Response<MemberInfoItem> response) {
-				MemberInfoItem item = response.body();
+		if(userTypeRadioId == R.id.login_usertype_member){
+			RemoteService remoteService = ServiceGenerator.createService(RemoteService.class);
+			Call<MemberInfoItem> call = remoteService.selectMemberInfo(id, password);
+			call.enqueue(new Callback<MemberInfoItem>() {
+				@Override
+				public void onResponse(Call<MemberInfoItem> call, Response<MemberInfoItem> response) {
+					MemberInfoItem item = response.body();
 
-				if(response.isSuccessful()){
-					MyToast.l(LoginActivity.this, item.toString());
-					((MyApp)getApplication()).CurrentMemberInfo = item;
+					if(response.isSuccessful()){
+						MyToast.l(LoginActivity.this, item.toString());
+						((MyApp)getApplication()).CurrentMemberInfo = item;
 
-					setResult(Activity.RESULT_OK);
-					finish();
+						setResult(Activity.RESULT_OK);
+						finish();
+					}
+
 				}
 
-			}
+				@Override
+				public void onFailure(Call<MemberInfoItem> call, Throwable t) {
+					MySnack.show(view, "No Internet Connectivity");
+					t.printStackTrace();
+				}
+			});
+		}
+		else{
+			RemoteService remoteService = ServiceGenerator.createService(RemoteService.class);
+			Call<OwnerInfoItem> call = remoteService.selectOwnerInfo(id, password);
+			call.enqueue(new Callback<OwnerInfoItem>() {
+				@Override
+				public void onResponse(Call<OwnerInfoItem> call, Response<OwnerInfoItem> response) {
+					OwnerInfoItem item = response.body();
 
-			@Override
-			public void onFailure(Call<MemberInfoItem> call, Throwable t) {
-				MySnack.show(view, "No Internet Connectivity");
-				t.printStackTrace();
-			}
-		});
+					if(response.isSuccessful()){
+						MyToast.l(LoginActivity.this, item.toString());
+						((MyApp)getApplication()).CurrentOwnerInfo = item;
+
+						setResult(Activity.RESULT_OK);
+						finish();
+					}
+
+				}
+
+				@Override
+				public void onFailure(Call<OwnerInfoItem> call, Throwable t) {
+					MySnack.show(view, "No Internet Connectivity");
+					t.printStackTrace();
+				}
+			});
+		}
+
 	}
 
 	@OnClick(R.id.login_find_idpass)
