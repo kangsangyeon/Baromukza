@@ -3,15 +3,19 @@ package com.kangsangyeon.baromukza;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kangsangyeon.baromukza.item.MemberInfoItem;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import butterknife.BindView;
 import butterknife.BindViews;
@@ -23,6 +27,9 @@ import butterknife.OnClick;
  */
 
 public class MemberMyInfoActivity extends AppCompatActivity {
+
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
 
     @BindView(R.id.myinfo_name)
     EditText nameEdit;
@@ -64,16 +71,24 @@ public class MemberMyInfoActivity extends AppCompatActivity {
             gender = "w";
         }
 
-        String phone = "%d-%d-%d";
-        for (EditText edit : phoneEditList) {
-            phone = String.format(phone, edit.getText().toString());
-        }
+        String phone = "%s-%s-%s";
+		for(EditText edit : phoneEditList){
+			phone = String.format(phone, edit.getText().toString());
+		}
 
         String email = emailEdit.getText().toString();
 
         String bankAccount = bankAccountText.getText().toString();
 
-    }
+		MemberInfoItem newMemberInfoItem = new MemberInfoItem();
+		newMemberInfoItem.name = name;
+		newMemberInfoItem.birth = birth;
+		newMemberInfoItem.gender = gender;
+		newMemberInfoItem.phone = phone;
+		newMemberInfoItem.email = email;
+//		newMemberInfoItem.bankAccountSeq = bankAccount;
+		Toast.makeText(MemberMyInfoActivity.this, newMemberInfoItem.toString(), Toast.LENGTH_SHORT).show();
+	}
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,6 +96,8 @@ public class MemberMyInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_myinfo);
 
         ButterKnife.bind(this);
+
+		toolbar.setTitle("마이페이지 〉 내 정보 수정");
 
         MemberInfoItem memberInfoItem = ((MyApp) getApplication()).CurrentMemberInfo;
         setView(memberInfoItem);
@@ -93,7 +110,12 @@ public class MemberMyInfoActivity extends AppCompatActivity {
      */
     private void setView(MemberInfoItem memberInfoItem) {
         nameEdit.setText(memberInfoItem.name);
-        birthText.setText(memberInfoItem.birth);
+
+		Pattern p = Pattern.compile("^(\\d{4})");
+		Matcher m = p.matcher(memberInfoItem.birth);
+		if(m.find()){
+			birthText.setText(m.group());
+		}
 
         if (memberInfoItem.gender.equals("m")) {
             genderManButton.setChecked(true);

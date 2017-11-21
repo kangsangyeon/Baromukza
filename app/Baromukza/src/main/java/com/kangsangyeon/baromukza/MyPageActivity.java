@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.kangsangyeon.baromukza.lib.MySnack;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -16,6 +18,9 @@ import butterknife.OnClick;
  */
 
 public class MyPageActivity extends AppCompatActivity {
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     @OnClick(R.id.mypage_profile_setting_image)
     public void onClickProfileSettingImage(final View view){
@@ -49,6 +54,8 @@ public class MyPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mypage);
 
         ButterKnife.bind(this);
+
+        toolbar.setTitle("마이페이지");
     }
 
     @Override

@@ -4,48 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <include
+        layout="@layout/appbar_default"
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        app:srcCompat="@drawable/baromukza_project_logo"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="188dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            app:srcCompat="@drawable/baromukza_project_logo"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="31dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="188dp"
+            android:orientation="vertical">
 
-            <RadioGroup
-                android:id="@+id/login_usertype"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <RadioButton
-                    android:id="@+id/login_usertype_member"
+                <RadioGroup
+                    android:id="@+id/login_usertype"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="손님(예약하는사람)"/>
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/login_usertype_owner"
+                    <RadioButton
+                        android:id="@+id/login_usertype_member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="손님(예약하는사람)"/>
+
+                    <RadioButton
+                        android:id="@+id/login_usertype_owner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="업주(예약받는사람)" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="업주(예약받는사람)" />
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical">
 
-            </RadioGroup>
+                    <EditText
+                        android:id="@+id/login_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="아이디"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="비밀번호"
+                        android:inputType="textPersonName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="109dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/login_login_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="로그인" />
+
+                    <CheckBox
+                        android:id="@+id/login_auto_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="자동로그인" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -56,118 +122,64 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/login_find_idpass"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/login_id"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="아이디"
-                    android:inputType="textPersonName" />
+                    android:layout_height="1dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/login_password"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="비밀번호"
-                    android:inputType="textPersonName" />
+                    android:layout_margin="2dp"
+                    android:text="아이디/비밀번호 찾기"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="TextView" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:id="@+id/login_join_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/login_login_btn"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="로그인" />
+                    android:layout_height="1dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="TextView" />
 
-                <CheckBox
-                    android:id="@+id/login_auto_check"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="자동로그인" />
+                    android:layout_margin="2dp"
+                    android:text="회원가입"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="TextView" />
 
             </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/login_find_idpass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="2dp"
-                android:background="@color/cardview_dark_background"
-                android:text="TextView" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:text="아이디/비밀번호 찾기"
-                android:textSize="14dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="2dp"
-                android:background="@color/cardview_dark_background"
-                android:text="TextView" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/login_join_member"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="2dp"
-                android:background="@color/cardview_dark_background"
-                android:text="TextView" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:text="회원가입"
-                android:textSize="14dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="2dp"
-                android:background="@color/cardview_dark_background"
-                android:text="TextView" />
 
         </LinearLayout>
 

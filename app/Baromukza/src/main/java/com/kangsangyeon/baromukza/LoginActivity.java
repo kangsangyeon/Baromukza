@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -27,6 +28,9 @@ import retrofit2.Response;
  */
 
 public class LoginActivity extends AppCompatActivity {
+
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
 
 	@BindView(R.id.login_usertype)
 	RadioGroup userTypeGroup;
@@ -110,6 +114,8 @@ public class LoginActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_login);
 
 		ButterKnife.bind(this, this);
+
+		toolbar.setTitle("로그인");
 	}
 
 }
