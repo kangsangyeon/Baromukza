@@ -11,12 +11,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="추천 메뉴"
         android:textSize="20dp"
         android:textStyle="bold"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/fragment_main_recommend_recyclerview"
+        android:id="@+id/fragment_main_recommend_menu_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="최근 예약한 음식점"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_main_recommend_recent_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"/>
 </LinearLayout>

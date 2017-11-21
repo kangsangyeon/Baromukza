@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.kangsangyeon.baromukza.R;
 import com.kangsangyeon.baromukza.item.RestaurantMenuInfoItem;
-import com.kangsangyeon.baromukza.viewholder.RestaurantViewHolder;
+import com.kangsangyeon.baromukza.viewholder.Item2ViewHolder;
 
 import java.util.List;
 
@@ -17,24 +17,24 @@ import java.util.List;
  * Created by pc-1 on 2017-11-13.
  */
 
-public class MainRecommendRecyclerAdapter extends RecyclerView.Adapter<RestaurantViewHolder> {
+public class MainRecommendMenuRecyclerAdapter extends RecyclerView.Adapter<Item2ViewHolder> {
 	Context mContext;
 	List<RestaurantMenuInfoItem> items;
 
-	public MainRecommendRecyclerAdapter(Context context, List<RestaurantMenuInfoItem> items) {
+	public MainRecommendMenuRecyclerAdapter(Context context, List<RestaurantMenuInfoItem> items) {
 		this.mContext = context;
 		this.items = items;
 	}
 
 	@Override
-	public RestaurantViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+	public Item2ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 		View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_2, null);
 
-		return new RestaurantViewHolder(v);
+		return new Item2ViewHolder(v);
 	}
 
 	@Override
-	public void onBindViewHolder(RestaurantViewHolder holder, int position) {
+	public void onBindViewHolder(Item2ViewHolder holder, int position) {
 		try{
 			final RestaurantMenuInfoItem item = items.get(position);
 //			Drawable drawable = RemoteLib.drawableFromUrl(mContext, item.image);

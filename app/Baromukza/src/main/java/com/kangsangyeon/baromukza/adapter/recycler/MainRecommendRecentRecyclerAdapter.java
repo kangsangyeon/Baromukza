@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.kangsangyeon.baromukza.R;
 import com.kangsangyeon.baromukza.item.RestaurantInfoItem;
-import com.kangsangyeon.baromukza.viewholder.Item1ViewHolder;
+import com.kangsangyeon.baromukza.viewholder.Item2ViewHolder;
 
 import java.util.List;
 
@@ -17,30 +17,31 @@ import java.util.List;
  * Created by pc-1 on 2017-11-13.
  */
 
-public class MainSearchRecyclerAdapter extends RecyclerView.Adapter<Item1ViewHolder> {
+public class MainRecommendRecentRecyclerAdapter extends RecyclerView.Adapter<Item2ViewHolder> {
 	Context mContext;
 	List<RestaurantInfoItem> items;
 
-	public MainSearchRecyclerAdapter(Context context, List<RestaurantInfoItem> items) {
+	public MainRecommendRecentRecyclerAdapter(Context context, List<RestaurantInfoItem> items) {
 		this.mContext = context;
 		this.items = items;
 	}
 
 	@Override
-	public Item1ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-		View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_1, null);
+	public Item2ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_2, null);
 
-		return new Item1ViewHolder(v);
+		return new Item2ViewHolder(v);
 	}
 
 	@Override
-	public void onBindViewHolder(Item1ViewHolder holder, int position) {
+	public void onBindViewHolder(Item2ViewHolder holder, int position) {
 		try{
 			final RestaurantInfoItem item = items.get(position);
 //			Drawable drawable = RemoteLib.drawableFromUrl(mContext, item.image);
-//			holder.imageViewsetBackground(drawable);
+//			holder.imageView.setBackground(drawable);
 			holder.titleText.setText(item.name);
-			holder.contentText.setText(item.description);
+			// TODO: 업종이 무엇인지 뜨게 하게 하거나.. 뭐 하여튼 부가적인 설명이 뜨게끔 바꾸기
+			holder.contentText.setText(item.name);
 			holder.cardView.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {

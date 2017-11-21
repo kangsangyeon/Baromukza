@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
  * Created by pc-1 on 2017-11-13.
  */
 
-public class RestaurantViewHolder extends RecyclerView.ViewHolder {
+public class Item2ViewHolder extends RecyclerView.ViewHolder {
 
 	@BindView(R.id.cardview) public CardView cardView;
 	@BindView(R.id.image) public ImageView imageView;
@@ -25,7 +25,7 @@ public class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
 	RestaurantInfoItem restaurantInfoItem;
 
-	public RestaurantViewHolder(View itemView) {
+	public Item2ViewHolder(View itemView) {
 		super(itemView);
 
 		ButterKnife.bind(this, itemView);
