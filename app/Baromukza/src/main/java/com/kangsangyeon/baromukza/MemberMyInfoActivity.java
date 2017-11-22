@@ -72,9 +72,11 @@ public class MemberMyInfoActivity extends AppCompatActivity {
         }
 
         String phone = "%s-%s-%s";
-		for(EditText edit : phoneEditList){
-			phone = String.format(phone, edit.getText().toString());
-		}
+		phone = String.format(phone,
+				phoneEditList.get(0).getText().toString(),
+				phoneEditList.get(1).getText().toString(),
+				phoneEditList.get(2).getText().toString()
+		);
 
         String email = emailEdit.getText().toString();
 
@@ -111,11 +113,12 @@ public class MemberMyInfoActivity extends AppCompatActivity {
     private void setView(MemberInfoItem memberInfoItem) {
         nameEdit.setText(memberInfoItem.name);
 
-		Pattern p = Pattern.compile("^(\\d{4})");
+		Pattern p = Pattern.compile("^(\\d{4}-\\d{2}-\\d{2})");
 		Matcher m = p.matcher(memberInfoItem.birth);
 		if(m.find()){
 			birthText.setText(m.group());
 		}
+		birthText.setText(memberInfoItem.birth);
 
         if (memberInfoItem.gender.equals("m")) {
             genderManButton.setChecked(true);
