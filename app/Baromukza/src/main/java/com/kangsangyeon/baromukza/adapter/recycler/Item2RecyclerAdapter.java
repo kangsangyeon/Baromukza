@@ -40,7 +40,7 @@ public class Item2RecyclerAdapter extends RecyclerView.Adapter<Item2ViewHolder> 
 		try{
 			final Item2ViewFieldInfoItem item = items.get(position).getViewFieldInfoItem();
 			final String title = item.title;
-			final String content = item.content;
+			final String content = item.content1;
 			final String content2 = item.content2;
 			final String content3 = item.content3;
 //			Drawable drawable = RemoteLib.drawableFromUrl(mContext, item.image);
