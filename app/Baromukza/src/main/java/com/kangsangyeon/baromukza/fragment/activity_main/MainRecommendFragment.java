@@ -64,13 +64,13 @@ public class MainRecommendFragment extends Fragment{
 					menuRecyclerView.setAdapter(new Item1RecyclerAdapter(getActivity(), items, R.layout.item_type1_2));
 				}
 				else {
-					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
+					MySnack.show(rootView, getString(R.string.error_nodata));
 				}
 			}
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantMenuInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "인터넷 환경을 확인해주세요.");
+				MySnack.show(rootView, getString(R.string.error_internet));
 				t.printStackTrace();
 			}
 		});
@@ -91,13 +91,13 @@ public class MainRecommendFragment extends Fragment{
 					recentRecyclerView.setAdapter(new Item1RecyclerAdapter(getActivity(), items, R.layout.item_type1_2));
 				}
 				else {
-					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
+					MySnack.show(rootView, getString(R.string.error_nodata));
 				}
 			}
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "인터넷 환경을 확인해주세요.");
+				MySnack.show(rootView, getString(R.string.error_internet));
 				t.printStackTrace();
 			}
 		});

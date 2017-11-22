@@ -61,14 +61,14 @@ public class LoginActivity extends AppCompatActivity {
 						finish();
 					}
 					else{
-						MySnack.show(view, "로그인에 실패하였습니다. \n아이디와 비밀번호를 확인해주세요.");
+						MySnack.show(view, getString(R.string.login_error));
 					}
 
 				}
 
 				@Override
 				public void onFailure(Call<MemberInfoItem> call, Throwable t) {
-					MySnack.show(view, "인터넷 환경을 확인해주세요.");
+					MySnack.show(view, getString(R.string.error_internet));
 					t.printStackTrace();
 				}
 
@@ -89,12 +89,15 @@ public class LoginActivity extends AppCompatActivity {
 						setResult(Activity.RESULT_OK);
 						finish();
 					}
+					else{
+						MySnack.show(view, getString(R.string.login_error));
+					}
 
 				}
 
 				@Override
 				public void onFailure(Call<OwnerInfoItem> call, Throwable t) {
-					MySnack.show(view, "로그인 실패");
+					MySnack.show(view, getString(R.string.error_internet));
 					t.printStackTrace();
 				}
 			});
@@ -119,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
 
 		ButterKnife.bind(this, this);
 
-		toolbar.setTitle("로그인");
+		toolbar.setTitle(getString(R.string.title_login));
 	}
 
 }

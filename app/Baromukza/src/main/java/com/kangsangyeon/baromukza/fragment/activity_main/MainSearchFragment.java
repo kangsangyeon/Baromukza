@@ -59,13 +59,13 @@ public class MainSearchFragment extends Fragment {
 					recyclerView.setAdapter(new Item1RecyclerAdapter(getActivity(), items, R.layout.item_type1_1));
 				}
 				else {
-					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
+					MySnack.show(rootView, getString(R.string.error_nodata));
 				}
 			}
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "인터넷 환경을 확인해주세요.");
+				MySnack.show(rootView, getString(R.string.error_internet));
 				t.printStackTrace();
 			}
 		});

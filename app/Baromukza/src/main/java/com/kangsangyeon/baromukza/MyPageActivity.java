@@ -55,7 +55,7 @@ public class MyPageActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        toolbar.setTitle("마이페이지");
+        toolbar.setTitle(getString(R.string.title_mypage));
     }
 
     @Override

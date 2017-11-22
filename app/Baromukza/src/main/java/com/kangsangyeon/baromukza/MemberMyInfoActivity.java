@@ -99,7 +99,7 @@ public class MemberMyInfoActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-		toolbar.setTitle("마이페이지 〉 내 정보 수정");
+		toolbar.setTitle(getString(R.string.title_myinfo));
 
         MemberInfoItem memberInfoItem = ((MyApp) getApplication()).CurrentMemberInfo;
         setView(memberInfoItem);
