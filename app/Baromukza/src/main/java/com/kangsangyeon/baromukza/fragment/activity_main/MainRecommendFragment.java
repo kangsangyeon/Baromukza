@@ -70,7 +70,7 @@ public class MainRecommendFragment extends Fragment{
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantMenuInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "데이터를 가져오는 데 실패하였습니다.");
+				MySnack.show(rootView, "인터넷 환경을 확인해주세요.");
 				t.printStackTrace();
 			}
 		});
@@ -97,7 +97,7 @@ public class MainRecommendFragment extends Fragment{
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "데이터를 가져오는 데 실패하였습니다.");
+				MySnack.show(rootView, "인터넷 환경을 확인해주세요.");
 				t.printStackTrace();
 			}
 		});

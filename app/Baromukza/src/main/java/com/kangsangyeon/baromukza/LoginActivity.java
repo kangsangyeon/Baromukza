@@ -60,14 +60,18 @@ public class LoginActivity extends AppCompatActivity {
 						setResult(Activity.RESULT_OK);
 						finish();
 					}
+					else{
+						MySnack.show(view, "로그인에 실패하였습니다. \n아이디와 비밀번호를 확인해주세요.");
+					}
 
 				}
 
 				@Override
 				public void onFailure(Call<MemberInfoItem> call, Throwable t) {
-					MySnack.show(view, "로그인 실패");
+					MySnack.show(view, "인터넷 환경을 확인해주세요.");
 					t.printStackTrace();
 				}
+
 			});
 		}
 		else{
