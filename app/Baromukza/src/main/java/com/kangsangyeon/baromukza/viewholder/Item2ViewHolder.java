@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kangsangyeon.baromukza.R;
-import com.kangsangyeon.baromukza.item.RestaurantInfoItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,8 +21,8 @@ public class Item2ViewHolder extends RecyclerView.ViewHolder {
 	@BindView(R.id.image) public ImageView imageView;
 	@BindView(R.id.title) public TextView titleText;
 	@BindView(R.id.content) public TextView contentText;
-
-	RestaurantInfoItem restaurantInfoItem;
+	@BindView(R.id.content2) public TextView content2Text;
+	@BindView(R.id.content3) public TextView content3Text;
 
 	public Item2ViewHolder(View itemView) {
 		super(itemView);

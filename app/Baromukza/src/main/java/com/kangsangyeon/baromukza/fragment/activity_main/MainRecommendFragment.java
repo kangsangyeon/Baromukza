@@ -10,8 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kangsangyeon.baromukza.R;
-import com.kangsangyeon.baromukza.adapter.recycler.MainRecommendMenuRecyclerAdapter;
-import com.kangsangyeon.baromukza.adapter.recycler.MainRecommendRecentRecyclerAdapter;
+import com.kangsangyeon.baromukza.adapter.recycler.Item1RecyclerAdapter;
 import com.kangsangyeon.baromukza.item.RestaurantInfoItem;
 import com.kangsangyeon.baromukza.item.RestaurantMenuInfoItem;
 import com.kangsangyeon.baromukza.lib.MySnack;
@@ -62,7 +61,7 @@ public class MainRecommendFragment extends Fragment{
 				ArrayList<RestaurantMenuInfoItem> items = response.body();
 
 				if (items != null) {
-					menuRecyclerView.setAdapter(new MainRecommendMenuRecyclerAdapter(getActivity(), items));
+					menuRecyclerView.setAdapter(new Item1RecyclerAdapter(getActivity(), items, R.layout.item_type1_2));
 				}
 				else {
 					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
@@ -89,7 +88,7 @@ public class MainRecommendFragment extends Fragment{
 				ArrayList<RestaurantInfoItem> items = response.body();
 
 				if (items != null) {
-					recentRecyclerView.setAdapter(new MainRecommendRecentRecyclerAdapter(getActivity(), items));
+					recentRecyclerView.setAdapter(new Item1RecyclerAdapter(getActivity(), items, R.layout.item_type1_2));
 				}
 				else {
 					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
@@ -103,10 +102,7 @@ public class MainRecommendFragment extends Fragment{
 			}
 		});
 
-
-
         return rootView;
-
     }
 
 }
