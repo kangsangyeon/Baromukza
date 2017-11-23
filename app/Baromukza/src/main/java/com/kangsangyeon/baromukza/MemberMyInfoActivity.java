@@ -45,16 +45,9 @@ public class MemberMyInfoActivity extends AppCompatActivity {
     List<EditText> phoneEditList;
     @BindView(R.id.myinfo_email)
     EditText emailEdit;
-    @BindView(R.id.myinfo_bank_account)
-    TextView bankAccountText;
 
     @OnClick(R.id.myinfo_birth_change)
     public void onChangeBirth(View view) {
-
-    }
-
-    @OnClick(R.id.myinfo_bank_account_change)
-    public void onChangeBankAccount(View view) {
 
     }
 
@@ -80,15 +73,12 @@ public class MemberMyInfoActivity extends AppCompatActivity {
 
         String email = emailEdit.getText().toString();
 
-        String bankAccount = bankAccountText.getText().toString();
-
 		MemberInfoItem newMemberInfoItem = new MemberInfoItem();
 		newMemberInfoItem.name = name;
 		newMemberInfoItem.birth = birth;
 		newMemberInfoItem.gender = gender;
 		newMemberInfoItem.phone = phone;
 		newMemberInfoItem.email = email;
-//		newMemberInfoItem.bankAccountSeq = bankAccount;
 		Toast.makeText(MemberMyInfoActivity.this, newMemberInfoItem.toString(), Toast.LENGTH_SHORT).show();
 	}
 
@@ -134,8 +124,6 @@ public class MemberMyInfoActivity extends AppCompatActivity {
         }
 
         emailEdit.setText(memberInfoItem.email);
-
-        bankAccountText.setText("하이");
     }
 
 
