@@ -76,7 +76,7 @@ router.post('/', (req, res)=>{
 
 		if(rows[0].cnt > 0){
 			console.log(id + "이미 등록된 id 입니다 \n");
-			return res.status(200).send('이미 등록된 id 입니다');
+			return res.status(400).send('이미 등록된 id 입니다');
 		}
 		else{
 
@@ -137,7 +137,7 @@ router.put('/:id', (req, res)=>{
 				console.log("row.affectedRows : " + rows.affectedRows);
 				if(rows.affectedRows > 0){
 					res.contentType('application/json');
-					return res.sendStatus(200);
+					return res.sendStatus(200)
 				}
 				else{
 					return res.status(400).send("멤버 정보 업데이트에 실패했습니다");
