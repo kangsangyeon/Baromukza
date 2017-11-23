@@ -20,4 +20,7 @@
     <string name="login_error">로그인에 실패하였습니다.\n아이디와 비밀번호를 확인해주세요</string>
     <string name="login_need">로그인이 필요한 서비스입니다</string>
     <string name="login_cancel">로그인을 취소하였습니다</string>
+    
+    <string name="myinfo_error">정보를 변경하는 데 실패하였습니다.\n잠시 뒤에 재시도해주세요</string>
+    <string name="myinfo_success">내 정보를 성공적으로 갱신했습니다</string>
 </resources>

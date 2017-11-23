@@ -19,7 +19,21 @@ public class MemberInfoItem {
     @SerializedName("email")                public String email;
     @SerializedName("join_date")            public String joinDate;
 
-    @Override
+	public MemberInfoItem(){}
+	private MemberInfoItem(int seq, String id, String password, String name, String birth, String gender, String phone, String image, String email, String joinDate) {
+		this.seq = seq;
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.birth = birth;
+		this.gender = gender;
+		this.phone = phone;
+		this.image = image;
+		this.email = email;
+		this.joinDate = joinDate;
+	}
+
+	@Override
     public String toString() {
         return "MemberInfoItem{" +
                 "seq=" + seq +
@@ -34,4 +48,9 @@ public class MemberInfoItem {
                 ", joinDate='" + joinDate + '\'' +
                 '}';
     }
+
+    public MemberInfoItem clone(){
+
+		return new MemberInfoItem(this.seq, this.id, this.password, this.name, this.birth, this.gender, this.phone, this.image, this.email, this.joinDate);
+	}
 }

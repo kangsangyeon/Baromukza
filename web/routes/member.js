@@ -137,10 +137,10 @@ router.put('/:id', (req, res)=>{
 				console.log("row.affectedRows : " + rows.affectedRows);
 				if(rows.affectedRows > 0){
 					res.contentType('application/json');
-					res.status(200).send(JSON.stringify(rows))
+					return res.sendStatus(200);
 				}
 				else{
-					res.status(400).send("멤버 정보 업데이트에 실패했습니다");
+					return res.status(400).send("멤버 정보 업데이트에 실패했습니다");
 				}
 
 			});

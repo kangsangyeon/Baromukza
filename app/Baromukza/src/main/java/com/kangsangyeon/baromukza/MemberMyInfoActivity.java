@@ -1,5 +1,6 @@
 package com.kangsangyeon.baromukza;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +10,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.kangsangyeon.baromukza.item.MemberInfoItem;
+import com.kangsangyeon.baromukza.lib.MySnack;
+import com.kangsangyeon.baromukza.remote.RemoteService;
+import com.kangsangyeon.baromukza.remote.ServiceGenerator;
 
 import java.util.List;
 import java.util.regex.Matcher;
@@ -21,6 +24,9 @@ import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by pc-1 on 2017-11-10.
@@ -47,12 +53,12 @@ public class MemberMyInfoActivity extends AppCompatActivity {
     EditText emailEdit;
 
     @OnClick(R.id.myinfo_birth_change)
-    public void onChangeBirth(View view) {
+    public void onChangeBirth(final View view) {
 
     }
 
     @OnClick(R.id.myinfo_apply)
-    public void onClickApply(View view) {
+    public void onClickApply(final View view) {
         String name = nameEdit.getText().toString();
 
         String birth = birthText.getText().toString();
@@ -73,13 +79,38 @@ public class MemberMyInfoActivity extends AppCompatActivity {
 
         String email = emailEdit.getText().toString();
 
-		MemberInfoItem newMemberInfoItem = new MemberInfoItem();
+		MemberInfoItem currentMemberInfoItem = ((MyApp) getApplication()).CurrentMemberInfo;
+		MemberInfoItem newMemberInfoItem = currentMemberInfoItem.clone();
 		newMemberInfoItem.name = name;
 		newMemberInfoItem.birth = birth;
 		newMemberInfoItem.gender = gender;
 		newMemberInfoItem.phone = phone;
 		newMemberInfoItem.email = email;
-		Toast.makeText(MemberMyInfoActivity.this, newMemberInfoItem.toString(), Toast.LENGTH_SHORT).show();
+//		MyToast.l(MemberMyInfoActivity.this, newMemberInfoItem.toString());
+
+		RemoteService remoteService = ServiceGenerator.createService(RemoteService.class);
+		Call<String> call = remoteService.putMemberInfo(newMemberInfoItem.id, newMemberInfoItem);
+		call.enqueue(new Callback<String>() {
+			@Override
+			public void onResponse(Call<String> call, Response<String> response) {
+
+				if(response.isSuccessful()){
+
+					setResult(Activity.RESULT_OK);
+					finish();
+				}
+				else{
+					MySnack.show(view, getString(R.string.myinfo_error));
+				}
+
+			}
+
+			@Override
+			public void onFailure(Call<String> call, Throwable t) {
+				MySnack.show(view, getString(R.string.error_internet));
+				t.printStackTrace();
+			}
+		});
 	}
 
     @Override
