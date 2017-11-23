@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 //					startActivity(intent);
 				}
 				else{
-					MyToast.s(MainActivity.this, "로그인이 필요한 서비스입니다");
+					MyToast.s(MainActivity.this, getString(R.string.login_need));
 					goLoginActivity();
 				}
 
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity
 			headerName.setText(currentOwnerInfo.name);
 		}
 		else{
-			headerName.setText("로그인이 필요합니다");
+			headerName.setText(getString(R.string.login_need));
 		}
 	}
 
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity
 			}
 			else {
 				// 로그인 취소
-				MyToast.s(MainActivity.this, "로그인을 취소하였습니다.");
+				MyToast.s(MainActivity.this, getString(R.string.login_cancel));
 			}
 		}
 	}

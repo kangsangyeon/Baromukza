@@ -13,18 +13,6 @@ import java.util.regex.Pattern;
  */
 public class EtcLib {
     public final static String TAG = EtcLib.class.getSimpleName();
-    private volatile static EtcLib instance;
-
-    public static EtcLib getInstance() {
-        if (instance == null) {
-            synchronized (EtcLib.class) {
-                if (instance == null) {
-                    instance = new EtcLib();
-                }
-            }
-        }
-        return instance;
-    }
 
     /**
      * 현재 기기의 전화 번호를 반환한다(+82가 붙은 전화번호로 반환).

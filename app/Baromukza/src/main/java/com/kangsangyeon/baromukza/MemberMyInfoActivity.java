@@ -45,16 +45,9 @@ public class MemberMyInfoActivity extends AppCompatActivity {
     List<EditText> phoneEditList;
     @BindView(R.id.myinfo_email)
     EditText emailEdit;
-    @BindView(R.id.myinfo_bank_account)
-    TextView bankAccountText;
 
     @OnClick(R.id.myinfo_birth_change)
     public void onChangeBirth(View view) {
-
-    }
-
-    @OnClick(R.id.myinfo_bank_account_change)
-    public void onChangeBankAccount(View view) {
 
     }
 
@@ -72,13 +65,13 @@ public class MemberMyInfoActivity extends AppCompatActivity {
         }
 
         String phone = "%s-%s-%s";
-		for(EditText edit : phoneEditList){
-			phone = String.format(phone, edit.getText().toString());
-		}
+		phone = String.format(phone,
+				phoneEditList.get(0).getText().toString(),
+				phoneEditList.get(1).getText().toString(),
+				phoneEditList.get(2).getText().toString()
+		);
 
         String email = emailEdit.getText().toString();
-
-        String bankAccount = bankAccountText.getText().toString();
 
 		MemberInfoItem newMemberInfoItem = new MemberInfoItem();
 		newMemberInfoItem.name = name;
@@ -86,7 +79,6 @@ public class MemberMyInfoActivity extends AppCompatActivity {
 		newMemberInfoItem.gender = gender;
 		newMemberInfoItem.phone = phone;
 		newMemberInfoItem.email = email;
-//		newMemberInfoItem.bankAccountSeq = bankAccount;
 		Toast.makeText(MemberMyInfoActivity.this, newMemberInfoItem.toString(), Toast.LENGTH_SHORT).show();
 	}
 
@@ -97,7 +89,7 @@ public class MemberMyInfoActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-		toolbar.setTitle("마이페이지 〉 내 정보 수정");
+		toolbar.setTitle(getString(R.string.title_myinfo));
 
         MemberInfoItem memberInfoItem = ((MyApp) getApplication()).CurrentMemberInfo;
         setView(memberInfoItem);
@@ -111,11 +103,12 @@ public class MemberMyInfoActivity extends AppCompatActivity {
     private void setView(MemberInfoItem memberInfoItem) {
         nameEdit.setText(memberInfoItem.name);
 
-		Pattern p = Pattern.compile("^(\\d{4})");
+		Pattern p = Pattern.compile("^(\\d{4}-\\d{2}-\\d{2})");
 		Matcher m = p.matcher(memberInfoItem.birth);
 		if(m.find()){
 			birthText.setText(m.group());
 		}
+		birthText.setText(memberInfoItem.birth);
 
         if (memberInfoItem.gender.equals("m")) {
             genderManButton.setChecked(true);
@@ -131,8 +124,6 @@ public class MemberMyInfoActivity extends AppCompatActivity {
         }
 
         emailEdit.setText(memberInfoItem.email);
-
-        bankAccountText.setText("하이");
     }
 
 

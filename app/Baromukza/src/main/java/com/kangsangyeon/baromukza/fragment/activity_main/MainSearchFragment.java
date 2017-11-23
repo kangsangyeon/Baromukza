@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kangsangyeon.baromukza.R;
-import com.kangsangyeon.baromukza.adapter.recycler.MainSearchRecyclerAdapter;
+import com.kangsangyeon.baromukza.adapter.recycler.Item1RecyclerAdapter;
 import com.kangsangyeon.baromukza.item.RestaurantInfoItem;
 import com.kangsangyeon.baromukza.lib.MySnack;
 import com.kangsangyeon.baromukza.remote.RemoteService;
@@ -56,16 +56,16 @@ public class MainSearchFragment extends Fragment {
 				ArrayList<RestaurantInfoItem> items = response.body();
 
 				if (items != null) {
-					recyclerView.setAdapter(new MainSearchRecyclerAdapter(getActivity(), items));
+					recyclerView.setAdapter(new Item1RecyclerAdapter(getActivity(), items, R.layout.item_type1_1));
 				}
 				else {
-					MySnack.show(rootView, "데이터 못가져왔어욤 ㅠㅅㅠ");
+					MySnack.show(rootView, getString(R.string.error_nodata));
 				}
 			}
 
 			@Override
 			public void onFailure(Call<ArrayList<RestaurantInfoItem>> call, Throwable t) {
-				MySnack.show(rootView, "데이터를 가져오는 데 실패하였습니다.");
+				MySnack.show(rootView, getString(R.string.error_internet));
 				t.printStackTrace();
 			}
 		});
