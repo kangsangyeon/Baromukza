@@ -71,11 +71,83 @@ INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, i
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (6, 1,2,'참 집', '참 집 입니다. 조금 맛있는 중국집 입니다.', 'https://www.menupan.com/common/service/img_proxy.asp?src=http%3A%2F%2Fblogfiles.naver.net%2F20140601_263%2Fx_reason_1401606177877ROtM7_JPEG%2FDSC02640.JPG', '10:00:00', '22:30:00', ' 010-8453-1716', '13176', '경기도 성남시 중원구 금광2동 3118', '1층 黲 집');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (7, 1,9,'악마의떡복이', '앜마의 떡복이 입니다. ', 'http://mblogthumb4.phinf.naver.net/20130416_123/adorable5ll_1366119015510fbc9A_JPEG/IMG_6240.JPG?type=w2',  '12:00:00', '24:00:00', '010-9952-0201', '13173', '경기도 성남시 중원구 금빛로85번길 1 ', '2층 악마의 떡복이');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (8, 1,1,'동 전 집', '동 전 집 입니다.   그냥가지 마시구 먹고 가세요', 'http://mblogthumb4.phinf.naver.net/20160211_31/mariweather_1455187085687UkAns_JPEG/R0047799.jpg?type=w2',  '12:00:00', '24:00:00', '010-3469-5471', '13167', '경기도 성남시 중원구 금광동 2941', '1층 동 전 집');  
-INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (9, 1,12,'스노우카페', '눈내리는날에 커피한잔 어떠세요?', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0ZVj9e8tmCqUI_NTU1n-7y4k2MIYMBfdB__aFb87ON6htEB9','00:00:00', '24:00:00', '010-2547-1038', '13167', '경기도 성남시 중원구 금광2동 2957', '1층 스노우 카페');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (9, 2,12,'스노우카페', '눈내리는날에 커피한잔 어떠세요?', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0ZVj9e8tmCqUI_NTU1n-7y4k2MIYMBfdB__aFb87ON6htEB9','00:00:00', '24:00:00', '010-2547-1038', '13167', '경기도 성남시 중원구 금광2동 2957', '1층 스노우 카페');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (10, 2,8,'홍벽돌', '치즈를 조와하신다면 한번 오시죠', 'http://img.ezmember.co.kr/cache/board/2014/11/09/dbc0e559dafead6dec2291c0b73d410f.jpg', '13:00:00', '02:00:00', '010-3478-6020', '16889', '경기도 용인시 수지구 죽전1동 죽전로 150', '1층 홍벽돌');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (11, 2,13,'고기나라', '삼겹, 목살, 항정, 살치, 갈비 되지고기 소고기 무한리필 입니다.', 'http://mblogthumb2.phinf.naver.net/20150924_161/f2225800_1443095141373B5PfW_JPEG/%B0%FC%C0%FA%B5%BF_3_%2829%29.jpg?type=w2', '13:00:00', '03:00:00', '010-0184-7398', '16889', '경기도 용인시 수지구 죽전동 1323-5, '1층 고기나라');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (12, 2,2,'중국나라', '맛있는 짱깨집 이에요.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8z3cYqRDH0OnST7mdskK1bYudV4I_KIpD8bsNDBFkJD7BqNR', '11:00:00', '24:00:00', '010-4594-5666', '16889', '경기도 용인시 수지구 죽전1동 1336-9', '1층 중국나라');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (13, 2,2,'효동각', '효동각 가락점 입니다. 11월 한정 짜장+탕수육이 1만 2천원', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5AzyB5oaBvmsphzdpCe1tBCd0zZuX4nlttG4Scu9YWSDhmdX_zg', '2', '08:00:00', '23:00:00', '010-3459-8809', '16889', '경기도 용인시 수지구 죽전동 1328-1', '1층 효동각');  
 INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (14, 2,2,'산성각', '범상한 중국집입니다. 어서오세요', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyObQ7xY97QRi-2IM4d3mZYVRrZrG38K8A0sgvNeNBopJEaG5A', '11:00:00', '22:00:00', '010-0091-7580', '16889', '경기도 용인시 수지구 죽전동 1325-6', '2층 산성각');  
+
+insert into menu_category (name) values ('면'):
+insert into menu_category (name) values ('튀김'):
+insert into menu_category (name) values ('볶음밥'):
+insert into menu_category (name) values ('국물'):
+insert into menu_category (name) values ('떡복이'):
+insert into menu_category (name) values ('피자'):
+insert into menu_category (name) values ('치킨'):
+insert into menu_category (name) values ('햄버거'):
+insert into menu_category (name) values ('고기'):
+insert into menu_category (name) values ('음료'):
+insert into menu_category (name) values ('빵'):
+insert into menu_category (name) values ('커피'):
+insert into menu_category (name) values ('술'):
+insert into menu_category (name) values ('기타'):
+
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,1,'짜장면','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBPnkb93bDzLDngQNSF8PpFDbxtWP-rwKxq8ZfLU2xDqhX0NE',4000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYRkwRV9-EHl3WbTlHjerZMKLGWJEAc27PyYv6TE_tWYgvWEYkyQ',12000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'양념탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ73qh0CQiNXm67VMxrq2ylYew8UdPdCfAXtmZryNMC_vOy2vG3ag',14000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'짜장볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-UN3L5JNUrrq4KKqRacsayrp9wTLG-h41Cw6Lr_sHbihjysdRA',5500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'김치볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kjeSePi6DCgy4BeTIMNDPVcr8VVDEzFE-0-DA5bO9xTTz3OljQ',5000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'뼈해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcADXupvzyAgm2yz8FAZWvji1fTwSc0NaMMNIV_7mRmGUDNSp',6000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'감자탕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_TifCsC_6su-_mPX3LCj5yE8t2CZndW3z2_oEtmioZvI4xeBp',27000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'순대국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxnhqYdhKP8KHp4lx3ee3g6313BkdUxO8rldIpdCebEnWG7UVGA',6000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'우거지 해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamMzqwxdmWmP6UrYwUTy5pbliik_Kxvj70tvNrpgwGYrB4Smu',5000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'육개장','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeF_qJLrJfrOabEKZKQWHmkFdX-mHxeeNklCwVxKnptriDYxmkA',7000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'이소떡','http://mblogthumb3.phinf.naver.net/20160910_162/jukkii7_1473511085482QlN31_JPEG/image_766678011473510955340.jpg?type=w800',3500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'달복이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScpPR_wVZx9dYMz-Z6qaevKvnCb4QjErHZAvsJH6i0_pDSkz-lmg',4000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'매콤이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOcDBSgtXns58kVH7AY4cjTNUe48MQ28rayV8nkZEPTgHaRw9z',4000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,4,'오뎅세트','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZJvs1DwLjv7dF0Fop7ZxvFGvcwJk0bAG6cVSA6juttk9Vik2',5000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,2,'오징어 튀김','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJo8cGJVEH39iIVbflIRO7K3GXSt7X--TTM04qWtmc3EtzIsd',3000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'레몬에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DgUZAWvQp6gdZBcuSXmOPouneDdW4RTnCQLBVql6oSXk17SqNg',2500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'자몽에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1wGLXRVdez1GwmqAI2GJWzD6JvXnE_8_-BDOcfTjAoBsQE5uX6Q',2500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,11,'허니브레드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72QfKiruNofD-zkZOS8LXXfyXw2NTqysq5Ul1-x2nwbKtcplB',5000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'에스프레소','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlyqb5zN_8rdHZ9K4gnlXmMQ_iBJbG1OnjRFMgNUkw8qg605ZUA',7000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'캬라멜 마키야또','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19IRyzV-jy7bAymram7zwlyzZB3lP0t5MSq5x-TmA4bJlUi4a',4200);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,9,'고기무한리필','http://cfile236.uf.daum.net/image/194113234A9488D23E5B9C',14900);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'스파클링','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZRq5dWR1e5JwvY7pQQrdCM_r3vOxLS-GnL-iLzURzTlfgtHdyg',1500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'물','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAOG0iHd02mMKaq3rvwUjeUVZzDKpECuM7yIHsbYUBU7ES9PfVQ',500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'처음처럼','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpEPL_2qNUx1zIMAZOS_TN0aTqPDeyz3L8dOjmu8hgohim13qTeA',4000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'자몽에 이슬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2G2e0G8j9zT1xm0-dWl4VYYqyukd_Z7FKG9czzApXJPUIKGQZ3w',4500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'짬뽕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhLTI7W7V7wfW0G92l_TAeBhyVew2CouA0Ftxji1f1Qz92cgzIQ',5500);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짜','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDcCuVvnOxP__6rDOZGHLmCweMIx1sdMoVeerMTfTfxZO2ECS',6000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0j_VRiVeI2PboBJfXduwjyx_JngW7_CBrrYjdGgU3lLhdncCl',6000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,2,'군만두','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xUEvr_A3hN62AezeBenueSWm8S3jPC1HkYPNWW8KuNFZZfd4',3000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,3,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN_7iBAKD3UiUYJEd-tfWD9Nhuk__pIqlAdoCFE0qEFJuFF2NvtA',10000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
