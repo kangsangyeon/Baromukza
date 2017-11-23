@@ -1,12 +1,14 @@
 package com.kangsangyeon.baromukza.item;
 
 import com.google.gson.annotations.SerializedName;
+import com.kangsangyeon.baromukza.item.recycler.Item1ViewFieldInfoItem;
+import com.kangsangyeon.baromukza.item.recycler.Item1Viewable;
 
 /**
  * Created by pc-1 on 2017-11-10.
  */
 
-public class RestaurantInfoItem {
+public class RestaurantInfoItem implements Item1Viewable{
 
     @SerializedName("restaurant")           public int seq;
     @SerializedName("owner_seq")            public int ownerSeq;
@@ -21,6 +23,11 @@ public class RestaurantInfoItem {
     @SerializedName("address_1")            public String address1;
     @SerializedName("address_2")            public String address2;
     @SerializedName("address_3")            public String address3;
+
+    @Override
+    public Item1ViewFieldInfoItem getViewFieldInfoItem() {
+        return new Item1ViewFieldInfoItem(image, name, description);
+    }
 
     @Override
     public String toString() {

@@ -17,7 +17,6 @@ public class MemberInfoItem {
     @SerializedName("phone")                public String phone;
     @SerializedName("image")                public String image;
     @SerializedName("email")                public String email;
-    @SerializedName("bank_account_seq")     public int bankAccountSeq;
     @SerializedName("join_date")            public String joinDate;
 
     @Override
@@ -32,7 +31,6 @@ public class MemberInfoItem {
                 ", phone='" + phone + '\'' +
                 ", image='" + image + '\'' +
                 ", email='" + email + '\'' +
-                ", bankAccountSeq=" + bankAccountSeq +
                 ", joinDate='" + joinDate + '\'' +
                 '}';
     }

@@ -4,7 +4,6 @@
 CREATE DATABASE baromukza;
 USE baromukza;
 
-
 -- 코드 테이블
 -- bank_code Table Create SQL
 CREATE TABLE bank_code
@@ -32,6 +31,12 @@ CREATE TABLE restaurant_category
     `name`          VARCHAR(20)    NULL             ,
     PRIMARY KEY (category_seq)
 );
+CREATE TABLE menu_category
+(
+    `category_seq`  INT            NOT NULL         AUTO_INCREMENT,
+    `name`          VARCHAR(20)    NULL             ,
+    PRIMARY KEY (category_seq)
+);
 -- region Table Create SQL
 CREATE TABLE region
 (
@@ -54,13 +59,8 @@ CREATE TABLE region
      `phone`               VARCHAR(20)     NOT NULL   ,
      `image`               VARCHAR(100)    NULL       ,
      `email`               VARCHAR(45)     NOT NULL   ,
-     `bank_account_seq`    INT             NULL       ,
      `join_date`           DATETIME        NOT NULL   DEFAULT CURRENT_TIMESTAMP,
-     PRIMARY KEY (member_seq),
-     CONSTRAINT `fk_member_bank_account_seq`
-        FOREIGN KEY (`bank_account_seq`) REFERENCES `bank_account` (`bank_account_seq`)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE
+     PRIMARY KEY (member_seq)
  );
  -- owner Table Create SQL
  CREATE TABLE owner
@@ -85,10 +85,10 @@ CREATE TABLE restaurant
     `restaurant_seq`  INT             NOT NULL      AUTO_INCREMENT,
     `owner_seq`       INT             NOT NULL      ,
     `region_seq`      INT             NOT NULL      ,
+    `category_seq`    INT             NULL          ,
     `name`            VARCHAR(50)     NULL          ,
     `description`     VARCHAR(200)    NULL          ,
     `image`           VARCHAR(100)    NULL          ,
-    `category_seq`    INT             NULL          ,
     `start_time`      TIME            NULL          ,
     `end_time`        TIME            NULL          ,
     `rating`          INT             NULL          ,
@@ -97,28 +97,37 @@ CREATE TABLE restaurant
     `address_2`       VARCHAR(100)    NULL          ,
     `address_3`       VARCHAR(100)    NULL          ,
     PRIMARY KEY (restaurant_seq),
-    CONSTRAINT `fk_restaurant_category_seq`
-       FOREIGN KEY (`category_seq`) REFERENCES `restaurant_category` (`category_seq`)
+    CONSTRAINT `fk_restaurant_owner_seq`
+       FOREIGN KEY (`owner_seq`) REFERENCES `owner` (`owner_seq`)
            ON DELETE CASCADE
            ON UPDATE CASCADE,
     CONSTRAINT `fk_restaurant_region_seq`
        FOREIGN KEY (`region_seq`) REFERENCES `region` (`region_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE,
+    CONSTRAINT `fk_restaurant_category_seq`
+       FOREIGN KEY (`category_seq`) REFERENCES `restaurant_category` (`category_seq`)
            ON DELETE CASCADE
            ON UPDATE CASCADE
 );
 -- restaurant_menu Table Create SQL
 CREATE TABLE restaurant_menu
 (
-    `menu_seq`        INT             NOT NULL      AUTO_INCREMENT,
-    `restaurant_seq`  INT             NOT NULL      ,
-    `name`            VARCHAR(50)     NULL          ,
-    `image`           VARCHAR(100)    NULL          ,
-    `price`           INT             NULL          ,
+    `menu_seq`            INT             NOT NULL      AUTO_INCREMENT,
+    `restaurant_seq`      INT             NOT NULL      ,
+    `menu_category_seq`   INT             NOT NULL      ,
+    `name`                VARCHAR(50)     NULL          ,
+    `image`               VARCHAR(100)    NULL          ,
+    `price`               INT             NULL          ,
     PRIMARY KEY (menu_seq),
     CONSTRAINT `fk_menu_restaurant_seq`
        FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
            ON DELETE CASCADE
-           ON UPDATE CASCADE
+           ON UPDATE CASCADE,
+    CONSTRAINT `fk_menu_category_seq`
+        FOREIGN KEY (`menu_category_seq`) REFERENCES `menu_category` (`category_seq`)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 -- reservation Table Create SQL
 CREATE TABLE reservation
@@ -130,10 +139,14 @@ CREATE TABLE reservation
     `is_accepted`       CHAR(1)     NULL            ,
     `reservation_time`  DATETIME    NULL            ,
     `member_count`      INT         NULL            ,
-    `reserves`          INT         NULL            ,
+    `price`             INT         NULL            ,
     PRIMARY KEY (reservation_seq),
     CONSTRAINT `fk_reservation_restaurant_seq`
        FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE,
+    CONSTRAINT `fk_reservation_member_seq`
+       FOREIGN KEY (`member_seq`) REFERENCES `member` (`member_seq`)
            ON DELETE CASCADE
            ON UPDATE CASCADE
 );
@@ -152,23 +165,6 @@ CREATE TABLE reservation_detail
            ON UPDATE CASCADE,
      CONSTRAINT `fk_menu_seq`
         FOREIGN KEY (`menu_seq`) REFERENCES `restaurant_menu` (`menu_seq`)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE
-);
--- reserves Table Create SQL
-CREATE TABLE reserves
-(
-    `member_seq`          INT             NOT NULL  ,
-    `region_seq`          INT             NOT NULL  ,
-    `reserves`            INT             NULL      ,
-    `last_modified_date`  DATETIME        NULL      ,
-    PRIMARY KEY (member_seq, restaurant_seq),
-    CONSTRAINT `fk_reserves_member_seq`
-       FOREIGN KEY (`member_seq`) REFERENCES `member` (`member_seq`)
-           ON DELETE CASCADE
-           ON UPDATE CASCADE,
-     CONSTRAINT `fk_reserves_region_seq`
-        FOREIGN KEY (`region_seq`) REFERENCES `region` (`region_seq`)
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );

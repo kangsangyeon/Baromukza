@@ -8,7 +8,8 @@ exports.connect = ()=>{
 		host	: 'localhost',
 		user	: 'root',
 		password: 'password',
-		database: 'baromukza'
+		database: 'baromukza',
+		dateStrings: 'date'
 	});
 }
 
