@@ -57,7 +57,7 @@ CREATE TABLE region
      `birth`               DATE            NOT NULL   ,
      `gender`              CHAR(1)         NOT NULL   ,
      `phone`               VARCHAR(20)     NOT NULL   ,
-     `image`               VARCHAR(100)    NULL       ,
+     `image`               VARCHAR(300)    NULL       ,
      `email`               VARCHAR(45)     NOT NULL   ,
      `join_date`           DATETIME        NOT NULL   DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (member_seq)
@@ -88,7 +88,7 @@ CREATE TABLE restaurant
     `category_seq`    INT             NULL          ,
     `name`            VARCHAR(50)     NULL          ,
     `description`     VARCHAR(200)    NULL          ,
-    `image`           VARCHAR(100)    NULL          ,
+    `image`           VARCHAR(300)    NULL          ,
     `start_time`      TIME            NULL          ,
     `end_time`        TIME            NULL          ,
     `rating`          INT             NULL          ,
@@ -117,7 +117,7 @@ CREATE TABLE restaurant_menu
     `restaurant_seq`      INT             NOT NULL      ,
     `menu_category_seq`   INT             NOT NULL      ,
     `name`                VARCHAR(50)     NULL          ,
-    `image`               VARCHAR(100)    NULL          ,
+    `image`               VARCHAR(300)    NULL          ,
     `price`               INT             NULL          ,
     PRIMARY KEY (menu_seq),
     CONSTRAINT `fk_menu_restaurant_seq`
@@ -168,12 +168,11 @@ CREATE TABLE reservation_detail
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
--- restaurant_favorite Table Create SQL
-CREATE TABLE restaurant_favorite
+-- favorite Table Create SQL
+CREATE TABLE favorite
 (
     `member_seq`      INT    NOT NULL               ,
     `restaurant_seq`  INT    NOT NULL               ,
-    `region_seq`      INT    NOT NULL               ,
     PRIMARY KEY (member_seq, restaurant_seq),
     CONSTRAINT `fk_favorite_member_seq`
         FOREIGN KEY (`member_seq`) REFERENCES `member` (`member_seq`)
@@ -181,10 +180,6 @@ CREATE TABLE restaurant_favorite
             ON UPDATE CASCADE,
     CONSTRAINT `fk_favorite_restaurant_seq`
         FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE,
-    CONSTRAINT `fk_favorite_region_seq`
-        FOREIGN KEY (`region_seq`) REFERENCES `region` (`region_seq`)
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
@@ -194,11 +189,10 @@ CREATE TABLE restaurant_review
     `review_seq`      INT              NOT NULL     AUTO_INCREMENT,
     `restaurant_seq`  INT              NOT NULL     ,
     `member_seq`      INT              NOT NULL     ,
-    `type`            CHAR(1)          NULL         ,
     `rating`          INT              NULL         ,
     `title`           VARCHAR(100)     NULL         ,
     `content`         VARCHAR(1000)    NULL         ,
-    `reg_time`        DATETIME         NULL         ,
+    `reg_time`        DATETIME         NULL         DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (review_seq),
     CONSTRAINT `fk_restaurant_review_restaurant_seq`
        FOREIGN KEY (`restaurant_seq`) REFERENCES `restaurant` (`restaurant_seq`)
@@ -213,7 +207,7 @@ CREATE TABLE restaurant_review_image
 (
     `image_seq`       INT              NOT NULL     AUTO_INCREMENT,
     `review_seq`      INT              NOT NULL     ,
-    `image`           VARCHAR(100)     NULL         ,        ,
+    `image`           VARCHAR(300)     NULL         ,
     PRIMARY KEY (image_seq),
     CONSTRAINT `fk_restaurant_review_image_review_seq`
        FOREIGN KEY (`review_seq`) REFERENCES `restaurant_review` (`review_seq`)

@@ -1,5 +1,89 @@
-﻿
--- 은행 계좌
+-- 코드 테이블
+-- 은행 코드 테이블
+INSERT INTO bank_code (name) VALUES ('한국은행');
+INSERT INTO bank_code (name) VALUES ('KB국민은행');
+INSERT INTO bank_code (name) VALUES ('신한은행');
+INSERT INTO bank_code (name) VALUES ('우리은행');
+INSERT INTO bank_code (name) VALUES ('KEB하나은행');
+INSERT INTO bank_code (name) VALUES ('케이뱅크');
+INSERT INTO bank_code (name) VALUES ('카카오뱅크');
+INSERT INTO bank_code (name) VALUES ('KDB산업은행');
+INSERT INTO bank_code (name) VALUES ('IBK기업은행');
+INSERT INTO bank_code (name) VALUES ('한국수출입은행');
+INSERT INTO bank_code (name) VALUES ('NH농협은행');
+INSERT INTO bank_code (name) VALUES ('수협은행');
+
+
+-- 레스토랑 카테고리
+INSERT INTO restaurant_category (name) VALUES ('한식');
+INSERT INTO restaurant_category (name) VALUES ('중식');
+INSERT INTO restaurant_category (name) VALUES ('일식');
+INSERT INTO restaurant_category (name) VALUES ('양식');
+INSERT INTO restaurant_category (name) VALUES ('피자');
+INSERT INTO restaurant_category (name) VALUES ('햄버거');
+INSERT INTO restaurant_category (name) VALUES ('치킨');
+INSERT INTO restaurant_category (name) VALUES ('이탈리아음식');
+INSERT INTO restaurant_category (name) VALUES ('분식');
+INSERT INTO restaurant_category (name) VALUES ('한식');
+INSERT INTO restaurant_category (name) VALUES ('해물');
+INSERT INTO restaurant_category (name) VALUES ('카페');
+INSERT INTO restaurant_category (name) VALUES ('육류');
+INSERT INTO restaurant_category (name) VALUES ('돈가스');
+INSERT INTO restaurant_category (name) VALUES ('포장마차');
+INSERT INTO restaurant_category (name) VALUES ('종합음식');
+INSERT INTO restaurant_category (name) VALUES ('뷔페');
+INSERT INTO restaurant_category (name) VALUES ('스파게티');
+INSERT INTO restaurant_category (name) VALUES ('인도음식');
+INSERT INTO restaurant_category (name) VALUES ('제과점');
+INSERT INTO restaurant_category (name) VALUES ('칼국수');
+INSERT INTO restaurant_category (name) VALUES ('아시아음식');
+INSERT INTO restaurant_category (name) VALUES ('프랑스음식');
+INSERT INTO restaurant_category (name) VALUES ('우동');
+INSERT INTO restaurant_category (name) VALUES ('전');
+INSERT INTO restaurant_category (name) VALUES ('주점');
+INSERT INTO restaurant_category (name) VALUES ('일본식라면');
+INSERT INTO restaurant_category (name) VALUES ('전통차');
+INSERT INTO restaurant_category (name) VALUES ('퓨전음식');
+INSERT INTO restaurant_category (name) VALUES ('스페인음식');
+INSERT INTO restaurant_category (name) VALUES ('남미음식');
+INSERT INTO restaurant_category (name) VALUES ('패밀리레스토랑');
+INSERT INTO restaurant_category (name) VALUES ('샌드위치');
+INSERT INTO restaurant_category (name) VALUES ('호떡');
+INSERT INTO restaurant_category (name) VALUES ('샐러드');
+INSERT INTO restaurant_category (name) VALUES ('꼬치');
+INSERT INTO restaurant_category (name) VALUES ('독일음식');
+
+-- 메뉴 카테고리
+INSERT INTO menu_category (name) VALUES ('면');
+INSERT INTO menu_category (name) VALUES ('튀김');
+INSERT INTO menu_category (name) VALUES ('볶음밥');
+INSERT INTO menu_category (name) VALUES ('국물');
+INSERT INTO menu_category (name) VALUES ('떡복이');
+INSERT INTO menu_category (name) VALUES ('피자');
+INSERT INTO menu_category (name) VALUES ('치킨');
+INSERT INTO menu_category (name) VALUES ('햄버거');
+INSERT INTO menu_category (name) VALUES ('고기');
+INSERT INTO menu_category (name) VALUES ('음료');
+INSERT INTO menu_category (name) VALUES ('빵');
+INSERT INTO menu_category (name) VALUES ('커피');
+INSERT INTO menu_category (name) VALUES ('술');
+INSERT INTO menu_category (name) VALUES ('기타');
+
+-- 지역코드
+INSERT INTO region (name) VALUES ('신구대');
+INSERT INTO region (name) VALUES ('단국대');
+INSERT INTO region (name) VALUES ('대진대');
+INSERT INTO region (name) VALUES ('성결대');
+INSERT INTO region (name) VALUES ('아주대');
+INSERT INTO region (name) VALUES ('경희대');
+INSERT INTO region (name) VALUES ('숭실대');
+INSERT INTO region (name) VALUES ('제주대');
+INSERT INTO region (name) VALUES ('한성대');
+INSERT INTO region (name) VALUES ('고려대');
+
+
+-- 데이터 테이블
+-- 은행게좌
 INSERT INTO bank_account (bank_seq, account) VALUES (1, '90994448653');
 INSERT INTO bank_account (bank_seq, account) VALUES (1, '12367785132');
 INSERT INTO bank_account (bank_seq, account) VALUES (2, '84532166815');
@@ -21,35 +105,22 @@ INSERT INTO bank_account (bank_seq, account) VALUES (9, '45678912365');
 INSERT INTO bank_account (bank_seq, account) VALUES (10, '12365878950');
 INSERT INTO bank_account (bank_seq, account) VALUES (10, '09077865798');
 
--- 지역코드
-INSERT INTO region (name) VALUES ('신구대');
-INSERT INTO region (name) VALUES ('단국대');
-INSERT INTO region (name) VALUES ('대진대');
-INSERT INTO region (name) VALUES ('성결대');
-INSERT INTO region (name) VALUES ('아주대');
-INSERT INTO region (name) VALUES ('경희대');
-INSERT INTO region (name) VALUES ('숭실대');
-INSERT INTO region (name) VALUES ('제주대');
-INSERT INTO region (name) VALUES ('한성대');
-INSERT INTO region (name) VALUES ('고려대');
+-- 회원 정보
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('spdlfma556', 'dkeldhtm007', '김지현', '1997-11-07', 'm', '010-5008-6287', 'whrwkdsla@naver.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('qudtls123', 'tprtm6974', '안지훈', '1997-01-12', 'f', '010-1234-4567', 'xptmxm99@lycos.co.kr');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('smrma123', 'tmtpr6974', '정민수', '1997-11-17', 'f', '010-3694-0310', 'asdqwe345@naver.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member1', 'qlqja1234', '강우성', '1997-10-17', 'm', '010-6547-8898', 'wkehdwjsxn123@naver.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member2', 'dlfdltkatk4567', '정혜성', '1997-07-21', 'f', '010-1235-9876', 'rlaclska777@daum.net');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member3', 'ch369402', '손창근', '1997-12-07', 'm', '010-5529-3694', 'tmtpr6974@naver.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member4', 'dlalrud123', '이창수', '1997-10-19', 'm', '010-6969-7474', 'dkrak666@gmail.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member5', 'snrnsep555', '신민우', '1997-08-16', 'f', '010-7474-6969', 'wlapdlf@gmail.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member6', 'dbrrbclftk76', '강승구', '1997-05-15', 'm', '010-6767-9494', 'eorkfks556@naver.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member7', 'sadasa2131', '김혁', '1997-03-12', 'm', '010-4949-6464', 'qhxpqp69@naver.com');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member8', 'tmtpr7469', '한우정', '1997-02-22', 'm', '010-1113-4589', 'shzhseha456@daum.net');
+INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member9', 'didtksgud777', '이태웅', '1997-02-27', 'm', '010-3216-7896', 'sodudghs09@naver.com');
 
--- 메뉴 카테고리
-INSERT INTO menu_category (name) VALUES ('면');
-INSERT INTO menu_category (name) VALUES ('튀김');
-INSERT INTO menu_category (name) VALUES ('볶음밥');
-INSERT INTO menu_category (name) VALUES ('국물');
-INSERT INTO menu_category (name) VALUES ('떡복이');
-INSERT INTO menu_category (name) VALUES ('피자');
-INSERT INTO menu_category (name) VALUES ('치킨');
-INSERT INTO menu_category (name) VALUES ('햄버거');
-INSERT INTO menu_category (name) VALUES ('고기');
-INSERT INTO menu_category (name) VALUES ('음료');
-INSERT INTO menu_category (name) VALUES ('빵');
-INSERT INTO menu_category (name) VALUES ('커피');
-INSERT INTO menu_category (name) VALUES ('술');
-INSERT INTO menu_category (name) VALUES ('기타');
- 
--- 점장
+
+-- 점장 정보
 INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner2', 'ps123456', '구운성', '010-1123-3345', 'ckh8822@naver.com', 3);
 INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner3', 'abc12345', '강태산', '010-1121-4589', 'ckid12234@smrmaak.com', 4);
 INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner4', 'efg09876', '류승호', '010-1256-4589', 'smrma123@daum.net', 5);
@@ -67,19 +138,6 @@ INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('
 INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner16', 'opq09876', '김경민', '010-7458-6958', 'tleldl5647@naver.com', 17);
 INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner17', 'rst12345', '이주영', '010-9875-3265', 'dldpvmwnl9743@daum.net', 18);
 
--- 회원 정보
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('spdlfma556', 'dkeldhtm007', '김지현', '1997-11-07', 'm', '010-5008-6287', 'whrwkdsla@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('qudtls123', 'tprtm6974', '안지훈', '1997-01-12', 'f', '010-1234-4567', 'xptmxm99@lycos.co.kr');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('smrma123', 'tmtpr6974', '정민수', '1997-11-17', 'f', '010-3694-0310', 'asdqwe345@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member1', 'qlqja1234', '강우성', '1997-10-17', 'm', '010-6547-8898', 'wkehdwjsxn123@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member2', 'dlfdltkatk4567', '정혜성', '1997-07-21', 'f', '010-1235-9876', 'rlaclska777@daum.net');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member3', 'ch369402', '손창근', '1997-12-07', 'm', '010-5529-3694', 'tmtpr6974@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member4', 'dlalrud123', '이창수', '1997-10-19', 'm', '010-6969-7474', 'dkrak666@gmail.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member5', 'snrnsep555', '신민우', '1997-08-16', 'f', '010-7474-6969', 'wlapdlf@gmail.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member6', 'dbrrbclftk76', '강승구', '1997-05-15', 'm', '010-6767-9494', 'eorkfks556@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member7', 'sadasa2131', '김혁', '1997-03-12', 'm', '010-4949-6464', 'qhxpqp69@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member8', 'tmtpr7469', '한우정', '1997-02-22', 'm', '010-1113-4589', 'shzhseha456@daum.net');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member9', 'didtksgud777', '이태웅', '1997-02-27', 'm', '010-3216-7896', 'sodudghs09@naver.com');
 
 -- 레스토랑
 INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (1, 1, 2,'홍콩반점', '평범한 중국집 입니다.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0g4px7MKC8gXe7A-S3AJZglkrTNET3o_bYwkDNnRw5QEVP2aZA', '09:00:00', '22:00:00', '010-5555-5235', '13183', '경기도 성남시 중원구 금광동 2401', '1층 홍콩반점');
@@ -95,7 +153,6 @@ INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, 
 INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (12, 2,2,'중국나라', '맛있는 짱깨집 이에요.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8z3cYqRDH0OnST7mdskK1bYudV4I_KIpD8bsNDBFkJD7BqNR', '11:00:00', '24:00:00', '010-4594-5666', '16889', '경기도 용인시 수지구 죽전1동 1336-9', '1층 중국나라');  
 INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (13, 2,2,'효동각', '효동각 가락점 입니다. 11월 한정 짜장+탕수육이 1만 2천원', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5AzyB5oaBvmsphzdpCe1tBCd0zZuX4nlttG4Scu9YWSDhmdX_zg', '08:00:00', '23:00:00', '010-3459-8809', '16889', '경기도 용인시 수지구 죽전동 1328-1', '1층 효동각');  
 INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (14, 2,2,'산성각', '범상한 중국집입니다. 어서오세요', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyObQ7xY97QRi-2IM4d3mZYVRrZrG38K8A0sgvNeNBopJEaG5A', '11:00:00', '22:00:00', '010-0091-7580', '16889', '경기도 용인시 수지구 죽전동 1325-6', '2층 산성각');  
-
 
 
 -- 메뉴
@@ -130,61 +187,48 @@ INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) 
 INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,2,'군만두','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xUEvr_A3hN62AezeBenueSWm8S3jPC1HkYPNWW8KuNFZZfd4',3000);
 INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,3,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN_7iBAKD3UiUYJEd-tfWD9Nhuk__pIqlAdoCFE0qEFJuFF2NvtA',10000);
 
+-- 즐겨찾기
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (1, 1);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (1, 5);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (1, 10);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (2, 5);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (2, 7);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (2, 9);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (2, 10);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (3, 3);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (3, 6);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (3, 11);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (3, 13);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (4, 1);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (4, 2);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (4, 3);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (4, 11);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (4, 12);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (5, 1);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (5, 10);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (6, 4);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (6, 6);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (6, 9);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (7, 3);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (7, 6);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (7, 11);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (8, 1);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (9, 1);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (9, 8);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (9, 9);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (9, 10);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (10, 5);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (10, 9);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (10, 10);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (11, 3);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (11, 6);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (11, 11);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (11, 13);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (12, 1);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (12, 5);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (12, 6);
+INSERT INTO favorite (member_seq, restaurant_seq) VALUES (12, 11);
 
--- 예약
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,1,'2017-11-10 15:18:27','y','2017-11-10 15:30:00',3,20000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,1,'2017-11-17 15:23:55','y','2017-11-17 15:30:00',2,10500);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,2,'2017-11-18 16:38:44','y','2017-11-18 16:45:00',3,27000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,2,'2017-11-19 17:05:32','y','2017-11-19 17:15:00',2,12000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,3,'2017-11-21 16:30:58','n','2017-11-21 16:40:00',2,13000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,3,'2017-11-23 16:27:03','n','2017-11-23 16:40:00',3,11500);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,8,'2017-11-03 12:18:27','y','2017-11-03 12:30:00',4,17000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,8,'2017-11-05 13:33:47','y','2017-11-05 13:43:00',3,14200);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,10,'2017-11-07 13:18:50','y','2017-11-07 13:32:00',2,37800);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,10,'2017-11-13 12:47:32','y','2017-11-13 13:00:00',2,32800);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,13,'2017-11-17 17:10:33','n','2017-11-17 17:20:00',3,17500);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,13,'2017-11-22 14:37:48','n','2017-11-22 14:50:00',3,28000);
 
-
-짜장2 탕수육1      		1
-짜복 김복			2
-감자탕				3
-뼈해 순대			4
-뼈해 육개			5
-이소떡 오뎅 오징		6
-레몬 자몽 허니 에스		7
-허니 2 캬라멜1			8
-무한리필2 처음처럼2		9
-무한리필2 스파클링2		10
-짬뽕 탕짜 탕짬			11
-탕짜 3 탕수육 1			12
-
-
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (1,1,2,8000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (1,2,1,12000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (2,4,1,5500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (2,5,1,5000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (3,7,1,27000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (4,6,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (4,8,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (5,6,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (5,10,1,7000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (6,11,1,3500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (6,14,1,5000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (6,15,1,3000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,16,1,2500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,17,1,2500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,13,1,5000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,14,1,7000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (8,13,2,10000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (8,15,1,4200);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (9,21,2,29800);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (9,24,2,8000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (10,21,2,29800);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (10,22,2,3000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (11,26,1,5500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (11,27,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (11,28,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (12,27,3,18000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (12,30,1,10000);
-
+-- 필요한 데이터 목록
+-- 예약, 예약 상세, 리뷰, 리뷰 이미지

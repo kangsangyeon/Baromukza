@@ -1,5 +1,5 @@
 -- 레스토랑 카테고리
-﻿ INSERT INTO restaurant_category(name) VALUES('한식');
+INSERT INTO restaurant_category(name) VALUES('한식');
 INSERT INTO restaurant_category(name) VALUES('중식');
 INSERT INTO restaurant_category(name) VALUES('일식');
 INSERT INTO restaurant_category(name) VALUES('양식');
