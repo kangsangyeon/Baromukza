@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiousver"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:text="아이디" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="아이디 확인" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radiousver"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radiousver"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            android:text="남자" />
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:scaleY="1.4"
+            android:scaleX="1.4"
+            android:text="여자" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"
+        android:background="@drawable/radiousver"
+        android:ems="10"
+        android:gravity="left|center"
+        android:textSize="20dp"
+        tools:text="이름" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:background="@drawable/radiousver"
+            android:ems="10"
+            android:gravity="left|center"
+            android:textSize="20dp"
+            tools:text="전화번호 미구현" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0"
+            android:text="전화인증" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"
+        android:background="@drawable/radiousver"
+        android:ems="10"
+        android:gravity="left|center"
+        android:textSize="20dp"
+        tools:text="전화번호 인증 미구현" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:background="@drawable/radiousver"
+            android:ems="10"
+            android:gravity="left|center"
+            android:textSize="20dp"
+            tools:text="이메일" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:text="@"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:id="@+id/combobox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="가입하기"
+        android:textSize="30dp" />
+
+</LinearLayout>
