@@ -93,36 +93,36 @@ insert into menu_category (name) values ('커피'):
 insert into menu_category (name) values ('술'):
 insert into menu_category (name) values ('기타'):
 
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,1,'짜장면','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBPnkb93bDzLDngQNSF8PpFDbxtWP-rwKxq8ZfLU2xDqhX0NE',4000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYRkwRV9-EHl3WbTlHjerZMKLGWJEAc27PyYv6TE_tWYgvWEYkyQ',12000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'양념탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ73qh0CQiNXm67VMxrq2ylYew8UdPdCfAXtmZryNMC_vOy2vG3ag',14000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'짜장볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-UN3L5JNUrrq4KKqRacsayrp9wTLG-h41Cw6Lr_sHbihjysdRA',5500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'김치볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kjeSePi6DCgy4BeTIMNDPVcr8VVDEzFE-0-DA5bO9xTTz3OljQ',5000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'뼈해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcADXupvzyAgm2yz8FAZWvji1fTwSc0NaMMNIV_7mRmGUDNSp',6000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'감자탕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_TifCsC_6su-_mPX3LCj5yE8t2CZndW3z2_oEtmioZvI4xeBp',27000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'순대국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxnhqYdhKP8KHp4lx3ee3g6313BkdUxO8rldIpdCebEnWG7UVGA',6000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'우거지 해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamMzqwxdmWmP6UrYwUTy5pbliik_Kxvj70tvNrpgwGYrB4Smu',5000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'육개장','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeF_qJLrJfrOabEKZKQWHmkFdX-mHxeeNklCwVxKnptriDYxmkA',7000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'이소떡','http://mblogthumb3.phinf.naver.net/20160910_162/jukkii7_1473511085482QlN31_JPEG/image_766678011473510955340.jpg?type=w800',3500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'달복이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScpPR_wVZx9dYMz-Z6qaevKvnCb4QjErHZAvsJH6i0_pDSkz-lmg',4000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'매콤이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOcDBSgtXns58kVH7AY4cjTNUe48MQ28rayV8nkZEPTgHaRw9z',4000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,4,'오뎅세트','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZJvs1DwLjv7dF0Fop7ZxvFGvcwJk0bAG6cVSA6juttk9Vik2',5000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,2,'오징어 튀김','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJo8cGJVEH39iIVbflIRO7K3GXSt7X--TTM04qWtmc3EtzIsd',3000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'레몬에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DgUZAWvQp6gdZBcuSXmOPouneDdW4RTnCQLBVql6oSXk17SqNg',2500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'자몽에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1wGLXRVdez1GwmqAI2GJWzD6JvXnE_8_-BDOcfTjAoBsQE5uX6Q',2500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,11,'허니브레드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72QfKiruNofD-zkZOS8LXXfyXw2NTqysq5Ul1-x2nwbKtcplB',5000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'에스프레소','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlyqb5zN_8rdHZ9K4gnlXmMQ_iBJbG1OnjRFMgNUkw8qg605ZUA',7000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'캬라멜 마키야또','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19IRyzV-jy7bAymram7zwlyzZB3lP0t5MSq5x-TmA4bJlUi4a',4200);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,9,'고기무한리필','http://cfile236.uf.daum.net/image/194113234A9488D23E5B9C',14900);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'스파클링','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZRq5dWR1e5JwvY7pQQrdCM_r3vOxLS-GnL-iLzURzTlfgtHdyg',1500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'물','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAOG0iHd02mMKaq3rvwUjeUVZzDKpECuM7yIHsbYUBU7ES9PfVQ',500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'처음처럼','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpEPL_2qNUx1zIMAZOS_TN0aTqPDeyz3L8dOjmu8hgohim13qTeA',4000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'자몽에 이슬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2G2e0G8j9zT1xm0-dWl4VYYqyukd_Z7FKG9czzApXJPUIKGQZ3w',4500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'짬뽕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhLTI7W7V7wfW0G92l_TAeBhyVew2CouA0Ftxji1f1Qz92cgzIQ',5500);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짜','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDcCuVvnOxP__6rDOZGHLmCweMIx1sdMoVeerMTfTfxZO2ECS',6000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0j_VRiVeI2PboBJfXduwjyx_JngW7_CBrrYjdGgU3lLhdncCl',6000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,2,'군만두','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xUEvr_A3hN62AezeBenueSWm8S3jPC1HkYPNWW8KuNFZZfd4',3000);
-insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,3,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN_7iBAKD3UiUYJEd-tfWD9Nhuk__pIqlAdoCFE0qEFJuFF2NvtA',10000);
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,1,'짜장면','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBPnkb93bDzLDngQNSF8PpFDbxtWP-rwKxq8ZfLU2xDqhX0NE',4000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYRkwRV9-EHl3WbTlHjerZMKLGWJEAc27PyYv6TE_tWYgvWEYkyQ',12000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'양념탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ73qh0CQiNXm67VMxrq2ylYew8UdPdCfAXtmZryNMC_vOy2vG3ag',14000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'짜장볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-UN3L5JNUrrq4KKqRacsayrp9wTLG-h41Cw6Lr_sHbihjysdRA',5500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'김치볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kjeSePi6DCgy4BeTIMNDPVcr8VVDEzFE-0-DA5bO9xTTz3OljQ',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'뼈해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcADXupvzyAgm2yz8FAZWvji1fTwSc0NaMMNIV_7mRmGUDNSp',6000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'감자탕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_TifCsC_6su-_mPX3LCj5yE8t2CZndW3z2_oEtmioZvI4xeBp',27000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'순대국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxnhqYdhKP8KHp4lx3ee3g6313BkdUxO8rldIpdCebEnWG7UVGA',6000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'우거지 해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamMzqwxdmWmP6UrYwUTy5pbliik_Kxvj70tvNrpgwGYrB4Smu',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'육개장','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeF_qJLrJfrOabEKZKQWHmkFdX-mHxeeNklCwVxKnptriDYxmkA',7000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'이소떡','http://mblogthumb3.phinf.naver.net/20160910_162/jukkii7_1473511085482QlN31_JPEG/image_766678011473510955340.jpg?type=w800',3500);		
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'달복이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScpPR_wVZx9dYMz-Z6qaevKvnCb4QjErHZAvsJH6i0_pDSkz-lmg',4000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'매콤이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOcDBSgtXns58kVH7AY4cjTNUe48MQ28rayV8nkZEPTgHaRw9z',4000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,4,'오뎅세트','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZJvs1DwLjv7dF0Fop7ZxvFGvcwJk0bAG6cVSA6juttk9Vik2',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,2,'오징어 튀김','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJo8cGJVEH39iIVbflIRO7K3GXSt7X--TTM04qWtmc3EtzIsd',3000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'레몬에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DgUZAWvQp6gdZBcuSXmOPouneDdW4RTnCQLBVql6oSXk17SqNg',2500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'자몽에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1wGLXRVdez1GwmqAI2GJWzD6JvXnE_8_-BDOcfTjAoBsQE5uX6Q',2500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,11,'허니브레드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72QfKiruNofD-zkZOS8LXXfyXw2NTqysq5Ul1-x2nwbKtcplB',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'에스프레소','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlyqb5zN_8rdHZ9K4gnlXmMQ_iBJbG1OnjRFMgNUkw8qg605ZUA',7000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'캬라멜 마키야또','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19IRyzV-jy7bAymram7zwlyzZB3lP0t5MSq5x-TmA4bJlUi4a',4200);		
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,9,'고기무한리필','http://cfile236.uf.daum.net/image/194113234A9488D23E5B9C',14900);									
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'스파클링','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZRq5dWR1e5JwvY7pQQrdCM_r3vOxLS-GnL-iLzURzTlfgtHdyg',1500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'물','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAOG0iHd02mMKaq3rvwUjeUVZzDKpECuM7yIHsbYUBU7ES9PfVQ',500);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'처음처럼','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpEPL_2qNUx1zIMAZOS_TN0aTqPDeyz3L8dOjmu8hgohim13qTeA',4000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'자몽에 이슬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2G2e0G8j9zT1xm0-dWl4VYYqyukd_Z7FKG9czzApXJPUIKGQZ3w',4500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'짬뽕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhLTI7W7V7wfW0G92l_TAeBhyVew2CouA0Ftxji1f1Qz92cgzIQ',5500);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짜','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDcCuVvnOxP__6rDOZGHLmCweMIx1sdMoVeerMTfTfxZO2ECS',6000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0j_VRiVeI2PboBJfXduwjyx_JngW7_CBrrYjdGgU3lLhdncCl',6000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,2,'군만두','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xUEvr_A3hN62AezeBenueSWm8S3jPC1HkYPNWW8KuNFZZfd4',3000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,3,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN_7iBAKD3UiUYJEd-tfWD9Nhuk__pIqlAdoCFE0qEFJuFF2NvtA',10000);			
 
 
 insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,1,'2017-11-10 15:18:27','y','2017-11-10 15:30:00',3,20000);
@@ -130,22 +130,57 @@ insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,r
 insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,2,'2017-11-18 16:38:44','y','2017-11-18 16:45:00',3,27000);
 insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,2,'2017-11-19 17:05:32','y','2017-11-19 17:15:00',2,12000);
 insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,3,'2017-11-21 16:30:58','n','2017-11-21 16:40:00',2,13000);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,3,'2017-11-23 16:27:03','n','2017-11-23 16:40:00',3,);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,8,'2017-11-03 12:18:27','y','2017-11-03 12:30:00',2,);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,8,'2017-11-05 13:33:47','y','2017-11-05 13:43:00',3,);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,10,'2017-11-07 13:18:50','y','2017-11-07 13:32:00',2,);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,10,'2017-11-13 12:47:32','y','2017-11-13 13:00:00',2,);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,13,'2017-11-17 17:10:33','n','2017-11-17 17:20:00',3,);
-insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,13,'2017-11-22 14:37:48','n','2017-11-22 14:50:00',3,);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,3,'2017-11-23 16:27:03','n','2017-11-23 16:40:00',3,11500);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,8,'2017-11-03 12:18:27','y','2017-11-03 12:30:00',4,17000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,8,'2017-11-05 13:33:47','y','2017-11-05 13:43:00',3,14200);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,10,'2017-11-07 13:18:50','y','2017-11-07 13:32:00',2,37800);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,10,'2017-11-13 12:47:32','y','2017-11-13 13:00:00',2,32800);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,13,'2017-11-17 17:10:33','n','2017-11-17 17:20:00',3,17500);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,13,'2017-11-22 14:37:48','n','2017-11-22 14:50:00',3,28000);
 
 
-짜장2 탕수육1
-짜복 김복
-감자탕
-뼈해 순대
-뼈해 육개
+짜장2 탕수육1      		1
+짜복 김복			2
+감자탕				3
+뼈해 순대			4
+뼈해 육개			5
+이소떡 오뎅 오징		6
+레몬 자몽 허니 에스		7
+허니 2 캬라멜1			8
+무한리필2 처음처럼2		9
+무한리필2 스파클링2		10
+짬뽕 탕짜 탕짬			11
+탕짜 3 탕수육 1			12
 
-insert into reservation_detail (reservation_seq,menu_seq,count,price) values (,,,);
+
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (1,1,2,8000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (1,2,1,12000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (2,4,1,5500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (2,5,1,5000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (3,7,1,27000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (4,6,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (4,8,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (5,6,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (5,10,1,7000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (6,11,1,3500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (6,14,1,5000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (6,15,1,3000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,16,1,2500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,17,1,2500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,13,1,5000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,14,1,7000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (8,13,2,10000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (8,15,1,4200);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (9,21,2,29800);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (9,24,2,8000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (10,21,2,29800);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (10,22,2,3000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (11,26,1,5500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (11,27,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (11,28,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (12,27,3,18000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (12,30,1,10000);
+
 
 
 
