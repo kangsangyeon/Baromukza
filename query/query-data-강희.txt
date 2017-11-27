@@ -1,149 +1,142 @@
 ﻿
--- 은행 계좌
-INSERT INTO bank_account (bank_seq, account) VALUES (1, '90994448653');
-INSERT INTO bank_account (bank_seq, account) VALUES (1, '12367785132');
-INSERT INTO bank_account (bank_seq, account) VALUES (2, '84532166815');
-INSERT INTO bank_account (bank_seq, account) VALUES (2, '55237689881');
-INSERT INTO bank_account (bank_seq, account) VALUES (3, '55677788823');
-INSERT INTO bank_account (bank_seq, account) VALUES (3, '11050779987');
-INSERT INTO bank_account (bank_seq, account) VALUES (4, '55378210001');
-INSERT INTO bank_account (bank_seq, account) VALUES (4, '90974369402');
-INSERT INTO bank_account (bank_seq, account) VALUES (5, '07012345787');
-INSERT INTO bank_account (bank_seq, account) VALUES (5, '48599012987');
-INSERT INTO bank_account (bank_seq, account) VALUES (6, '65498225987');
-INSERT INTO bank_account (bank_seq, account) VALUES (6, '12345678123');
-INSERT INTO bank_account (bank_seq, account) VALUES (8, '32165987456');
-INSERT INTO bank_account (bank_seq, account) VALUES (7, '13155987646');
-INSERT INTO bank_account (bank_seq, account) VALUES (8, '45450004165');
-INSERT INTO bank_account (bank_seq, account) VALUES (8, '77895220152');
-INSERT INTO bank_account (bank_seq, account) VALUES (9, '45056895050');
-INSERT INTO bank_account (bank_seq, account) VALUES (9, '45678912365');
-INSERT INTO bank_account (bank_seq, account) VALUES (10, '12365878950');
-INSERT INTO bank_account (bank_seq, account) VALUES (10, '09077865798');
+INSERT INTO bank_account(bank_seq, account) VALUES(1, '90994448653');
+INSERT INTO bank_account(bank_seq, account) VALUES(1, '12367785132');
+INSERT INTO bank_account(bank_seq, account) VALUES(2, '84532166815');
+INSERT INTO bank_account(bank_seq, account) VALUES(2, '55237689881');
+INSERT INTO bank_account(bank_seq, account) VALUES(3, '55677788823');
+INSERT INTO bank_account(bank_seq, account) VALUES(3, '11050779987');
+INSERT INTO bank_account(bank_seq, account) VALUES(4, '55378210001');
+INSERT INTO bank_account(bank_seq, account) VALUES(4, '90974369402');
+INSERT INTO bank_account(bank_seq, account) VALUES(5, '07012345787');
+INSERT INTO bank_account(bank_seq, account) VALUES(5, '48599012987');
+INSERT INTO bank_account(bank_seq, account) VALUES(6, '65498225987');
+INSERT INTO bank_account(bank_seq, account) VALUES(6, '12345678123');
+INSERT INTO bank_account(bank_seq, account) VALUES(8, '32165987456');
+INSERT INTO bank_account(bank_seq, account) VALUES(7, '13155987646');
+INSERT INTO bank_account(bank_seq, account) VALUES(8, '45450004165');
+INSERT INTO bank_account(bank_seq, account) VALUES(8, '77895220152');
+INSERT INTO bank_account(bank_seq, account) VALUES(9, '45056895050');
+INSERT INTO bank_account(bank_seq, account) VALUES(9, '45678912365');
+INSERT INTO bank_account(bank_seq, account) VALUES(10, '12365878950');
+INSERT INTO bank_account(bank_seq, account) VALUES(10, '09077865798');
 
--- 지역코드
-INSERT INTO region (name) VALUES ('신구대');
-INSERT INTO region (name) VALUES ('단국대');
-INSERT INTO region (name) VALUES ('대진대');
-INSERT INTO region (name) VALUES ('성결대');
-INSERT INTO region (name) VALUES ('아주대');
-INSERT INTO region (name) VALUES ('경희대');
-INSERT INTO region (name) VALUES ('숭실대');
-INSERT INTO region (name) VALUES ('제주대');
-INSERT INTO region (name) VALUES ('한성대');
-INSERT INTO region (name) VALUES ('고려대');
-
--- 메뉴 카테고리
-INSERT INTO menu_category (name) VALUES ('면');
-INSERT INTO menu_category (name) VALUES ('튀김');
-INSERT INTO menu_category (name) VALUES ('볶음밥');
-INSERT INTO menu_category (name) VALUES ('국물');
-INSERT INTO menu_category (name) VALUES ('떡복이');
-INSERT INTO menu_category (name) VALUES ('피자');
-INSERT INTO menu_category (name) VALUES ('치킨');
-INSERT INTO menu_category (name) VALUES ('햄버거');
-INSERT INTO menu_category (name) VALUES ('고기');
-INSERT INTO menu_category (name) VALUES ('음료');
-INSERT INTO menu_category (name) VALUES ('빵');
-INSERT INTO menu_category (name) VALUES ('커피');
-INSERT INTO menu_category (name) VALUES ('술');
-INSERT INTO menu_category (name) VALUES ('기타');
- 
--- 점장
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner2', 'ps123456', '구운성', '010-1123-3345', 'ckh8822@naver.com', 3);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner3', 'abc12345', '강태산', '010-1121-4589', 'ckid12234@smrmaak.com', 4);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner4', 'efg09876', '류승호', '010-1256-4589', 'smrma123@daum.net', 5);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner5', 'hij12345', '아상지', '010-3254-6587', 'dkanrhxh098@lycos.co.kr', 6);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner6', 'kln09876', '오재원', '010-1346-4679', 'fdsahu777.clfrpdl.com', 7);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner7', 'mop12345', '공석훈', '010-1212-1246', 'fnhu123@naver.com', 8);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner8', 'qrs09876', '장한성', '010-1313-7889', 'qkEHfm123@naver.com', 9);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner9', 'tuv12345', '정민수', '010-3131-1312', 'rmfkdnseh777@naver.com', 10);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner10', 'wxy09876', '하석준', '010-4556-6778', 'qndnjajrwk123@daum.net', 11);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner11', 'zab12345', '허정원', '010-1234-9876', 'anjgkfRk888@naver.com', 12);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner12', 'cde09876', '지원규', '010-1425-5869', 'angkwl@lycos.co.kr', 13);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner13', 'fgh12345', '신영민', '010-3625-6958', 'rmfotjk666@google.com', 14);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner14', 'ijk09876', '김민수', '010-3614-7466', 'rnrmfeh123@ehlrptwl.net', 15);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner15', 'lnm12345', '대진', '010-6541-3219', 'dpdlqmdl123@naver.com', 16);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner16', 'opq09876', '김경민', '010-7458-6958', 'tleldl5647@naver.com', 17);
-INSERT INTO owner (id, password, name, phone, email, bank_account_seq) VALUES ('owner17', 'rst12345', '이주영', '010-9875-3265', 'dldpvmwnl9743@daum.net', 18);
-
--- 회원 정보
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('spdlfma556', 'dkeldhtm007', '김지현', '1997-11-07', 'm', '010-5008-6287', 'whrwkdsla@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('qudtls123', 'tprtm6974', '안지훈', '1997-01-12', 'f', '010-1234-4567', 'xptmxm99@lycos.co.kr');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('smrma123', 'tmtpr6974', '정민수', '1997-11-17', 'f', '010-3694-0310', 'asdqwe345@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member1', 'qlqja1234', '강우성', '1997-10-17', 'm', '010-6547-8898', 'wkehdwjsxn123@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member2', 'dlfdltkatk4567', '정혜성', '1997-07-21', 'f', '010-1235-9876', 'rlaclska777@daum.net');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member3', 'ch369402', '손창근', '1997-12-07', 'm', '010-5529-3694', 'tmtpr6974@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member4', 'dlalrud123', '이창수', '1997-10-19', 'm', '010-6969-7474', 'dkrak666@gmail.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member5', 'snrnsep555', '신민우', '1997-08-16', 'f', '010-7474-6969', 'wlapdlf@gmail.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member6', 'dbrrbclftk76', '강승구', '1997-05-15', 'm', '010-6767-9494', 'eorkfks556@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member7', 'sadasa2131', '김혁', '1997-03-12', 'm', '010-4949-6464', 'qhxpqp69@naver.com');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member8', 'tmtpr7469', '한우정', '1997-02-22', 'm', '010-1113-4589', 'shzhseha456@daum.net');
-INSERT INTO member (id, password, name, birth, gender, phone, email) VALUES ('member9', 'didtksgud777', '이태웅', '1997-02-27', 'm', '010-3216-7896', 'sodudghs09@naver.com');
-
--- 레스토랑
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (1, 1, 2,'홍콩반점', '평범한 중국집 입니다.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0g4px7MKC8gXe7A-S3AJZglkrTNET3o_bYwkDNnRw5QEVP2aZA', '09:00:00', '22:00:00', '010-5555-5235', '13183', '경기도 성남시 중원구 금광동 2401', '1층 홍콩반점');
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (3, 1,1,'할매순대국', '더우나추우나 국빱드시고 가요.', 'http://cfile28.uf.tistory.com/image/275BF14357B7BF3B312458','12:00:00', '24:00:00', '010-0380-2939', '13176', '경기도 성남시 중원구 금광동 3096', '1층 할매순대국');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (4, 1,9,'이웃집 소녀 떡복이', '이소떡 입니다.', 'http://www.foodncafe.com/swfupload/UpLoad/20121113/10/136a0f83472689f61c9a8c4163129912.jpg',  '11:00:00', '23:30:00', '010-0542-1550', '13176', '경기도 성남시 중원구 금광2동 3099', '1층 이웃집 소녀 떡복이');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (5, 1,1,'엄마손맛', '엄마손맛입니다. 엄마의 손맛이 나요~', 'http://cityfood.co.kr/file2/h_0114/56844/img/1497506257_1.jpg', '08:30:00', '22:00:00', '010-7692-6501', '13173', '경기도 성남시 중원구 금빛로 77', '2층 엄마손맛');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (6, 1,2,'참 집', '참 집 입니다. 조금 맛있는 중국집 입니다.', 'https://www.menupan.com/common/service/img_proxy.asp?src=http%3A%2F%2Fblogfiles.naver.net%2F20140601_263%2Fx_reason_1401606177877ROtM7_JPEG%2FDSC02640.JPG', '10:00:00', '22:30:00', ' 010-8453-1716', '13176', '경기도 성남시 중원구 금광2동 3118', '1층 黲 집');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (7, 1,9,'악마의떡복이', '앜마의 떡복이 입니다. ', 'http://mblogthumb4.phinf.naver.net/20130416_123/adorable5ll_1366119015510fbc9A_JPEG/IMG_6240.JPG?type=w2',  '12:00:00', '24:00:00', '010-9952-0201', '13173', '경기도 성남시 중원구 금빛로85번길 1 ', '2층 악마의 떡복이');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (8, 1,1,'동 전 집', '동 전 집 입니다.   그냥가지 마시구 먹고 가세요', 'http://mblogthumb4.phinf.naver.net/20160211_31/mariweather_1455187085687UkAns_JPEG/R0047799.jpg?type=w2',  '12:00:00', '24:00:00', '010-3469-5471', '13167', '경기도 성남시 중원구 금광동 2941', '1층 동 전 집');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (9, 2,12,'스노우카페', '눈내리는날에 커피한잔 어떠세요?', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0ZVj9e8tmCqUI_NTU1n-7y4k2MIYMBfdB__aFb87ON6htEB9','00:00:00', '24:00:00', '010-2547-1038', '13167', '경기도 성남시 중원구 금광2동 2957', '1층 스노우 카페');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (10, 2,8,'홍벽돌', '치즈를 조와하신다면 한번 오시죠', 'http://img.ezmember.co.kr/cache/board/2014/11/09/dbc0e559dafead6dec2291c0b73d410f.jpg', '13:00:00', '02:00:00', '010-3478-6020', '16889', '경기도 용인시 수지구 죽전1동 죽전로 150', '1층 홍벽돌');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (11, 2,13,'고기나라', '삼겹, 목살, 항정, 살치, 갈비 되지고기 소고기 무한리필 입니다.', 'http://mblogthumb2.phinf.naver.net/20150924_161/f2225800_1443095141373B5PfW_JPEG/%B0%FC%C0%FA%B5%BF_3_%2829%29.jpg?type=w2', '13:00:00', '03:00:00', '010-0184-7398', '16889', '경기도 용인시 수지구 죽전동 1323-5', '1층 고기나라');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (12, 2,2,'중국나라', '맛있는 짱깨집 이에요.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8z3cYqRDH0OnST7mdskK1bYudV4I_KIpD8bsNDBFkJD7BqNR', '11:00:00', '24:00:00', '010-4594-5666', '16889', '경기도 용인시 수지구 죽전1동 1336-9', '1층 중국나라');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (13, 2,2,'효동각', '효동각 가락점 입니다. 11월 한정 짜장+탕수육이 1만 2천원', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5AzyB5oaBvmsphzdpCe1tBCd0zZuX4nlttG4Scu9YWSDhmdX_zg', '08:00:00', '23:00:00', '010-3459-8809', '16889', '경기도 용인시 수지구 죽전동 1328-1', '1층 효동각');  
-INSERT INTO restaurant (owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (14, 2,2,'산성각', '범상한 중국집입니다. 어서오세요', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyObQ7xY97QRi-2IM4d3mZYVRrZrG38K8A0sgvNeNBopJEaG5A', '11:00:00', '22:00:00', '010-0091-7580', '16889', '경기도 용인시 수지구 죽전동 1325-6', '2층 산성각');  
+insert into region(name) values ('신구대');
+insert into region(name) values ('단국대');
+insert into region(name) values ('대진대');
+insert into region(name) values ('성결대');
+insert into region(name) values ('아주대');
+insert into region(name) values ('경희대');
+insert into region(name) values ('숭실대');
+insert into region(name) values ('제주대');
+insert into region(name) values ('한성대');
+insert into region(name) values ('고려대');
 
 
 
--- 메뉴
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (1,1,'짜장면','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBPnkb93bDzLDngQNSF8PpFDbxtWP-rwKxq8ZfLU2xDqhX0NE',4000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (1,2,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYRkwRV9-EHl3WbTlHjerZMKLGWJEAc27PyYv6TE_tWYgvWEYkyQ',12000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (1,2,'양념탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ73qh0CQiNXm67VMxrq2ylYew8UdPdCfAXtmZryNMC_vOy2vG3ag',14000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (1,3,'짜장볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-UN3L5JNUrrq4KKqRacsayrp9wTLG-h41Cw6Lr_sHbihjysdRA',5500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (1,3,'김치볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kjeSePi6DCgy4BeTIMNDPVcr8VVDEzFE-0-DA5bO9xTTz3OljQ',5000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (2,4,'뼈해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcADXupvzyAgm2yz8FAZWvji1fTwSc0NaMMNIV_7mRmGUDNSp',6000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (2,4,'감자탕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_TifCsC_6su-_mPX3LCj5yE8t2CZndW3z2_oEtmioZvI4xeBp',27000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (2,4,'순대국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxnhqYdhKP8KHp4lx3ee3g6313BkdUxO8rldIpdCebEnWG7UVGA',6000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (2,4,'우거지 해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamMzqwxdmWmP6UrYwUTy5pbliik_Kxvj70tvNrpgwGYrB4Smu',5000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (2,4,'육개장','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeF_qJLrJfrOabEKZKQWHmkFdX-mHxeeNklCwVxKnptriDYxmkA',7000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (3,5,'이소떡','http://mblogthumb3.phinf.naver.net/20160910_162/jukkii7_1473511085482QlN31_JPEG/image_766678011473510955340.jpg?type=w800',3500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (3,5,'달복이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScpPR_wVZx9dYMz-Z6qaevKvnCb4QjErHZAvsJH6i0_pDSkz-lmg',4000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (3,5,'매콤이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOcDBSgtXns58kVH7AY4cjTNUe48MQ28rayV8nkZEPTgHaRw9z',4000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (3,4,'오뎅세트','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZJvs1DwLjv7dF0Fop7ZxvFGvcwJk0bAG6cVSA6juttk9Vik2',5000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (3,2,'오징어 튀김','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJo8cGJVEH39iIVbflIRO7K3GXSt7X--TTM04qWtmc3EtzIsd',3000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (8,10,'레몬에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DgUZAWvQp6gdZBcuSXmOPouneDdW4RTnCQLBVql6oSXk17SqNg',2500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (8,10,'자몽에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1wGLXRVdez1GwmqAI2GJWzD6JvXnE_8_-BDOcfTjAoBsQE5uX6Q',2500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (8,11,'허니브레드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72QfKiruNofD-zkZOS8LXXfyXw2NTqysq5Ul1-x2nwbKtcplB',5000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (8,12,'에스프레소','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlyqb5zN_8rdHZ9K4gnlXmMQ_iBJbG1OnjRFMgNUkw8qg605ZUA',7000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (8,12,'캬라멜 마키야또','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19IRyzV-jy7bAymram7zwlyzZB3lP0t5MSq5x-TmA4bJlUi4a',4200);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (10,9,'고기무한리필','http://cfile236.uf.daum.net/image/194113234A9488D23E5B9C',14900);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (10,10,'스파클링','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZRq5dWR1e5JwvY7pQQrdCM_r3vOxLS-GnL-iLzURzTlfgtHdyg',1500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (10,10,'물','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAOG0iHd02mMKaq3rvwUjeUVZzDKpECuM7yIHsbYUBU7ES9PfVQ',500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (10,13,'처음처럼','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpEPL_2qNUx1zIMAZOS_TN0aTqPDeyz3L8dOjmu8hgohim13qTeA',4000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (10,13,'자몽에 이슬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2G2e0G8j9zT1xm0-dWl4VYYqyukd_Z7FKG9czzApXJPUIKGQZ3w',4500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,1,'짬뽕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhLTI7W7V7wfW0G92l_TAeBhyVew2CouA0Ftxji1f1Qz92cgzIQ',5500);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,1,'탕짜','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDcCuVvnOxP__6rDOZGHLmCweMIx1sdMoVeerMTfTfxZO2ECS',6000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,1,'탕짬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0j_VRiVeI2PboBJfXduwjyx_JngW7_CBrrYjdGgU3lLhdncCl',6000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,2,'군만두','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xUEvr_A3hN62AezeBenueSWm8S3jPC1HkYPNWW8KuNFZZfd4',3000);
-INSERT INTO restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) VALUES (13,3,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN_7iBAKD3UiUYJEd-tfWD9Nhuk__pIqlAdoCFE0qEFJuFF2NvtA',10000);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner2', 'ps123456', '구운성', '010-1123-3345', 'ckh8822@naver.com', 3);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner3', 'abc12345', '강태산', '010-1121-4589', 'ckid12234@smrmaak.com', 4);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner4', 'efg09876', '류승호', '010-1256-4589', 'smrma123@daum.net', 5);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner5', 'hij12345', '아상지', '010-3254-6587', 'dkanrhxh098@lycos.co.kr', 6);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner6', 'kln09876', '오재원', '010-1346-4679', 'fdsahu777.clfrpdl.com', 7);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner7', 'mop12345', '공석훈', '010-1212-1246', 'fnhu123@naver.com', 8);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner8', 'qrs09876', '장한성', '010-1313-7889', 'qkEHfm123@naver.com', 9);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner9', 'tuv12345', '정민수', '010-3131-1312', 'rmfkdnseh777@naver.com', 10);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner10', 'wxy09876', '하석준', '010-4556-6778', 'qndnjajrwk123@daum.net', 11);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner11', 'zab12345', '허정원', '010-1234-9876', 'anjgkfRk888@naver.com', 12);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner12', 'cde09876', '지원규', '010-1425-5869', 'angkwl@lycos.co.kr', 13);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner13', 'fgh12345', '신영민', '010-3625-6958', 'rmfotjk666@google.com', 14);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner14', 'ijk09876', '김민수', '010-3614-7466', 'rnrmfeh123@ehlrptwl.net', 15);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner15', 'lnm12345', '대진', '010-6541-3219', 'dpdlqmdl123@naver.com', 16);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner16', 'opq09876', '김경민', '010-7458-6958', 'tleldl5647@naver.com', 17);
+INSERT INTO owner(id, password, name, phone, email, bank_account_seq) VALUES('owner17', 'rst12345', '이주영', '010-9875-3265', 'dldpvmwnl9743@daum.net', 18);
+
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('spdlfma556', 'dkeldhtm007', '김지현', '1997-11-07', 'm', '010-5008-6287', 'whrwkdsla@naver.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('qudtls123', 'tprtm6974', '안지훈', '1997-01-12', 'f', '010-1234-4567', 'xptmxm99@lycos.co.kr');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('smrma123', 'tmtpr6974', '정민수', '1997-11-17', 'f', '010-3694-0310', 'asdqwe345@naver.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member1', 'qlqja1234', '강우성', '1997-10-17', 'm', '010-6547-8898', 'wkehdwjsxn123@naver.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member2', 'dlfdltkatk4567', '정혜성', '1997-07-21', 'f', '010-1235-9876', 'rlaclska777@daum.net');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member3', 'ch369402', '손창근', '1997-12-07', 'm', '010-5529-3694', 'tmtpr6974@naver.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member4', 'dlalrud123', '이창수', '1997-10-19', 'm', '010-6969-7474', 'dkrak666@gmail.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member5', 'snrnsep555', '신민우', '1997-08-16', 'f', '010-7474-6969', 'wlapdlf@gmail.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member6', 'dbrrbclftk76', '강승구', '1997-05-15', 'm', '010-6767-9494', 'eorkfks556@naver.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member7', 'sadasa2131', '김혁', '1997-03-12', 'm', '010-4949-6464', 'qhxpqp69@naver.com');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member8', 'tmtpr7469', '한우정', '1997-02-22', 'm', '010-1113-4589', 'shzhseha456@daum.net');
+INSERT INTO member(id, password, name, birth, gender, phone, email) VALUES('member9', 'didtksgud777', '이태웅', '1997-02-27', 'm', '010-3216-7896', 'sodudghs09@naver.com');
+
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (1, 1, 1, '이름', '설명', 'image', '10:00', '22:00', '02-0000-0000', '주소1', '주소2', '주소3');
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (1, 1, 2,'홍콩반점', '평범한 중국집 입니다.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0g4px7MKC8gXe7A-S3AJZglkrTNET3o_bYwkDNnRw5QEVP2aZA', '09:00:00', '22:00:00', '010-5555-5235', '13183', '경기도 성남시 중원구 금광동 2401', '1층 홍콩반점');
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (3, 1,1,'할매순대국', '더우나추우나 국빱드시고 가요.', 'http://cfile28.uf.tistory.com/image/275BF14357B7BF3B312458','12:00:00', '24:00:00', '010-0380-2939', '13176', '경기도 성남시 중원구 금광동 3096', '1층 할매순대국');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (4, 1,9,'이웃집 소녀 떡복이', '이소떡 입니다.', 'http://www.foodncafe.com/swfupload/UpLoad/20121113/10/136a0f83472689f61c9a8c4163129912.jpg',  '11:00:00', '23:30:00', '010-0542-1550', '13176', '경기도 성남시 중원구 금광2동 3099', '1층 이웃집 소녀 떡복이');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (5, 1,1,'엄마손맛', '엄마손맛입니다. 엄마의 손맛이 나요~', 'http://cityfood.co.kr/file2/h_0114/56844/img/1497506257_1.jpg', '08:30:00', '22:00:00', '010-7692-6501', '13173', '경기도 성남시 중원구 금빛로 77', '2층 엄마손맛');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (6, 1,2,'참 집', '참 집 입니다. 조금 맛있는 중국집 입니다.', 'https://www.menupan.com/common/service/img_proxy.asp?src=http%3A%2F%2Fblogfiles.naver.net%2F20140601_263%2Fx_reason_1401606177877ROtM7_JPEG%2FDSC02640.JPG', '10:00:00', '22:30:00', ' 010-8453-1716', '13176', '경기도 성남시 중원구 금광2동 3118', '1층 黲 집');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (7, 1,9,'악마의떡복이', '앜마의 떡복이 입니다. ', 'http://mblogthumb4.phinf.naver.net/20130416_123/adorable5ll_1366119015510fbc9A_JPEG/IMG_6240.JPG?type=w2',  '12:00:00', '24:00:00', '010-9952-0201', '13173', '경기도 성남시 중원구 금빛로85번길 1 ', '2층 악마의 떡복이');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (8, 1,1,'동 전 집', '동 전 집 입니다.   그냥가지 마시구 먹고 가세요', 'http://mblogthumb4.phinf.naver.net/20160211_31/mariweather_1455187085687UkAns_JPEG/R0047799.jpg?type=w2',  '12:00:00', '24:00:00', '010-3469-5471', '13167', '경기도 성남시 중원구 금광동 2941', '1층 동 전 집');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (9, 2,12,'스노우카페', '눈내리는날에 커피한잔 어떠세요?', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0ZVj9e8tmCqUI_NTU1n-7y4k2MIYMBfdB__aFb87ON6htEB9','00:00:00', '24:00:00', '010-2547-1038', '13167', '경기도 성남시 중원구 금광2동 2957', '1층 스노우 카페');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (10, 2,8,'홍벽돌', '치즈를 조와하신다면 한번 오시죠', 'http://img.ezmember.co.kr/cache/board/2014/11/09/dbc0e559dafead6dec2291c0b73d410f.jpg', '13:00:00', '02:00:00', '010-3478-6020', '16889', '경기도 용인시 수지구 죽전1동 죽전로 150', '1층 홍벽돌');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (11, 2,13,'고기나라', '삼겹, 목살, 항정, 살치, 갈비 되지고기 소고기 무한리필 입니다.', 'http://mblogthumb2.phinf.naver.net/20150924_161/f2225800_1443095141373B5PfW_JPEG/%B0%FC%C0%FA%B5%BF_3_%2829%29.jpg?type=w2', '13:00:00', '03:00:00', '010-0184-7398', '16889', '경기도 용인시 수지구 죽전동 1323-5, '1층 고기나라');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (12, 2,2,'중국나라', '맛있는 짱깨집 이에요.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8z3cYqRDH0OnST7mdskK1bYudV4I_KIpD8bsNDBFkJD7BqNR', '11:00:00', '24:00:00', '010-4594-5666', '16889', '경기도 용인시 수지구 죽전1동 1336-9', '1층 중국나라');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (13, 2,2,'효동각', '효동각 가락점 입니다. 11월 한정 짜장+탕수육이 1만 2천원', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5AzyB5oaBvmsphzdpCe1tBCd0zZuX4nlttG4Scu9YWSDhmdX_zg', '2', '08:00:00', '23:00:00', '010-3459-8809', '16889', '경기도 용인시 수지구 죽전동 1328-1', '1층 효동각');  
+INSERT INTO restaurant(owner_seq, region_seq, category_seq, name, description, image, start_time, end_time, phone, address_1, address_2, address_3) VALUES (14, 2,2,'산성각', '범상한 중국집입니다. 어서오세요', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyObQ7xY97QRi-2IM4d3mZYVRrZrG38K8A0sgvNeNBopJEaG5A', '11:00:00', '22:00:00', '010-0091-7580', '16889', '경기도 용인시 수지구 죽전동 1325-6', '2층 산성각');  
+
+insert into menu_category (name) values ('면'):
+insert into menu_category (name) values ('튀김'):
+insert into menu_category (name) values ('볶음밥'):
+insert into menu_category (name) values ('국물'):
+insert into menu_category (name) values ('떡복이'):
+insert into menu_category (name) values ('피자'):
+insert into menu_category (name) values ('치킨'):
+insert into menu_category (name) values ('햄버거'):
+insert into menu_category (name) values ('고기'):
+insert into menu_category (name) values ('음료'):
+insert into menu_category (name) values ('빵'):
+insert into menu_category (name) values ('커피'):
+insert into menu_category (name) values ('술'):
+insert into menu_category (name) values ('기타'):
+
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,1,'짜장면','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBPnkb93bDzLDngQNSF8PpFDbxtWP-rwKxq8ZfLU2xDqhX0NE',4000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYRkwRV9-EHl3WbTlHjerZMKLGWJEAc27PyYv6TE_tWYgvWEYkyQ',12000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,2,'양념탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ73qh0CQiNXm67VMxrq2ylYew8UdPdCfAXtmZryNMC_vOy2vG3ag',14000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'짜장볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-UN3L5JNUrrq4KKqRacsayrp9wTLG-h41Cw6Lr_sHbihjysdRA',5500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (1,3,'김치볶음밥','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kjeSePi6DCgy4BeTIMNDPVcr8VVDEzFE-0-DA5bO9xTTz3OljQ',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'뼈해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcADXupvzyAgm2yz8FAZWvji1fTwSc0NaMMNIV_7mRmGUDNSp',6000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'감자탕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_TifCsC_6su-_mPX3LCj5yE8t2CZndW3z2_oEtmioZvI4xeBp',27000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'순대국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxnhqYdhKP8KHp4lx3ee3g6313BkdUxO8rldIpdCebEnWG7UVGA',6000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'우거지 해장국','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamMzqwxdmWmP6UrYwUTy5pbliik_Kxvj70tvNrpgwGYrB4Smu',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (2,4,'육개장','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeF_qJLrJfrOabEKZKQWHmkFdX-mHxeeNklCwVxKnptriDYxmkA',7000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'이소떡','http://mblogthumb3.phinf.naver.net/20160910_162/jukkii7_1473511085482QlN31_JPEG/image_766678011473510955340.jpg?type=w800',3500);		
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'달복이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScpPR_wVZx9dYMz-Z6qaevKvnCb4QjErHZAvsJH6i0_pDSkz-lmg',4000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,5,'매콤이','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOcDBSgtXns58kVH7AY4cjTNUe48MQ28rayV8nkZEPTgHaRw9z',4000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,4,'오뎅세트','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZJvs1DwLjv7dF0Fop7ZxvFGvcwJk0bAG6cVSA6juttk9Vik2',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (3,2,'오징어 튀김','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJo8cGJVEH39iIVbflIRO7K3GXSt7X--TTM04qWtmc3EtzIsd',3000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'레몬에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DgUZAWvQp6gdZBcuSXmOPouneDdW4RTnCQLBVql6oSXk17SqNg',2500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,10,'자몽에이드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1wGLXRVdez1GwmqAI2GJWzD6JvXnE_8_-BDOcfTjAoBsQE5uX6Q',2500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,11,'허니브레드','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72QfKiruNofD-zkZOS8LXXfyXw2NTqysq5Ul1-x2nwbKtcplB',5000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'에스프레소','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlyqb5zN_8rdHZ9K4gnlXmMQ_iBJbG1OnjRFMgNUkw8qg605ZUA',7000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (8,12,'캬라멜 마키야또','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19IRyzV-jy7bAymram7zwlyzZB3lP0t5MSq5x-TmA4bJlUi4a',4200);		
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,9,'고기무한리필','http://cfile236.uf.daum.net/image/194113234A9488D23E5B9C',14900);									
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'스파클링','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZRq5dWR1e5JwvY7pQQrdCM_r3vOxLS-GnL-iLzURzTlfgtHdyg',1500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,10,'물','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAOG0iHd02mMKaq3rvwUjeUVZzDKpECuM7yIHsbYUBU7ES9PfVQ',500);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'처음처럼','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpEPL_2qNUx1zIMAZOS_TN0aTqPDeyz3L8dOjmu8hgohim13qTeA',4000);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (10,13,'자몽에 이슬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2G2e0G8j9zT1xm0-dWl4VYYqyukd_Z7FKG9czzApXJPUIKGQZ3w',4500);			
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'짬뽕','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhLTI7W7V7wfW0G92l_TAeBhyVew2CouA0Ftxji1f1Qz92cgzIQ',5500);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짜','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDcCuVvnOxP__6rDOZGHLmCweMIx1sdMoVeerMTfTfxZO2ECS',6000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,1,'탕짬','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0j_VRiVeI2PboBJfXduwjyx_JngW7_CBrrYjdGgU3lLhdncCl',6000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,2,'군만두','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xUEvr_A3hN62AezeBenueSWm8S3jPC1HkYPNWW8KuNFZZfd4',3000);				
+insert into restaurant_menu (restaurant_seq,menu_category_seq,name,image,price) values (13,3,'탕수육','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN_7iBAKD3UiUYJEd-tfWD9Nhuk__pIqlAdoCFE0qEFJuFF2NvtA',10000);			
 
 
--- 예약
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,1,'2017-11-10 15:18:27','y','2017-11-10 15:30:00',3,20000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,1,'2017-11-17 15:23:55','y','2017-11-17 15:30:00',2,10500);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,2,'2017-11-18 16:38:44','y','2017-11-18 16:45:00',3,27000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,2,'2017-11-19 17:05:32','y','2017-11-19 17:15:00',2,12000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,3,'2017-11-21 16:30:58','n','2017-11-21 16:40:00',2,13000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (1,3,'2017-11-23 16:27:03','n','2017-11-23 16:40:00',3,11500);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,8,'2017-11-03 12:18:27','y','2017-11-03 12:30:00',4,17000);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,8,'2017-11-05 13:33:47','y','2017-11-05 13:43:00',3,14200);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,10,'2017-11-07 13:18:50','y','2017-11-07 13:32:00',2,37800);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,10,'2017-11-13 12:47:32','y','2017-11-13 13:00:00',2,32800);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,13,'2017-11-17 17:10:33','n','2017-11-17 17:20:00',3,17500);
-INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) VALUES (2,13,'2017-11-22 14:37:48','n','2017-11-22 14:50:00',3,28000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,1,'2017-11-10 15:18:27','y','2017-11-10 15:30:00',3,20000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,1,'2017-11-17 15:23:55','y','2017-11-17 15:30:00',2,10500);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,2,'2017-11-18 16:38:44','y','2017-11-18 16:45:00',3,27000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,2,'2017-11-19 17:05:32','y','2017-11-19 17:15:00',2,12000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,3,'2017-11-21 16:30:58','n','2017-11-21 16:40:00',2,13000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (1,3,'2017-11-23 16:27:03','n','2017-11-23 16:40:00',3,11500);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,8,'2017-11-03 12:18:27','y','2017-11-03 12:30:00',4,17000);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,8,'2017-11-05 13:33:47','y','2017-11-05 13:43:00',3,14200);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,10,'2017-11-07 13:18:50','y','2017-11-07 13:32:00',2,37800);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,10,'2017-11-13 12:47:32','y','2017-11-13 13:00:00',2,32800);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,13,'2017-11-17 17:10:33','n','2017-11-17 17:20:00',3,17500);
+insert into reservation (member_seq,restaurant_seq,reservated_time,is_accepted,reservation_time,member_count,price) values (2,13,'2017-11-22 14:37:48','n','2017-11-22 14:50:00',3,28000);
 
 
 짜장2 탕수육1      		1
@@ -160,31 +153,61 @@ INSERT INTO reservation (member_seq,restaurant_seq,reservated_time,is_accepted,r
 탕짜 3 탕수육 1			12
 
 
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (1,1,2,8000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (1,2,1,12000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (2,4,1,5500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (2,5,1,5000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (3,7,1,27000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (4,6,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (4,8,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (5,6,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (5,10,1,7000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (6,11,1,3500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (6,14,1,5000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (6,15,1,3000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,16,1,2500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,17,1,2500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,13,1,5000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (7,14,1,7000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (8,13,2,10000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (8,15,1,4200);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (9,21,2,29800);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (9,24,2,8000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (10,21,2,29800);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (10,22,2,3000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (11,26,1,5500);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (11,27,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (11,28,1,6000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (12,27,3,18000);
-INSERT INTO reservation_detail (reservation_seq,menu_seq,count,price) VALUES (12,30,1,10000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (1,1,2,8000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (1,2,1,12000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (2,4,1,5500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (2,5,1,5000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (3,7,1,27000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (4,6,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (4,8,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (5,6,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (5,10,1,7000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (6,11,1,3500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (6,14,1,5000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (6,15,1,3000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,16,1,2500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,17,1,2500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,13,1,5000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (7,14,1,7000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (8,13,2,10000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (8,15,1,4200);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (9,21,2,29800);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (9,24,2,8000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (10,21,2,29800);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (10,22,2,3000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (11,26,1,5500);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (11,27,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (11,28,1,6000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (12,27,3,18000);
+insert into reservation_detail (reservation_seq,menu_seq,count,price) values (12,30,1,10000);
+
+
+insert into restaurant_review (restaurant_seq,member_seq,rating,title,content,reg_time) values (1,1,4.0,'짜장보다는 복음밥...','여기는 특이하게 짜장 짬뽕보다는 볶음밥 류가 훨신 맛있네요 개인취향일지도 모르지만요.','2017-11-10 17:30:00');
+insert into restaurant_review (restaurant_seq,member_seq,rating,title,content,reg_time) values (2,1,4.5,'고기가 푸짐하다 ㄷㄷ','어... 음.. 그래 !! 여기는 미니감자탕(뼈 해장국)에 고기가 많이 들어있어서 자주갈거같네요.','2017-11-18 17:30:00');    
+insert into restaurant_review (restaurant_seq,member_seq,rating,title,content,reg_time) values (8,2,5.0,'양심적인 양이다.','여기는 빽다방만큼은아니지만 여러 브렌드의 카페를 다녀본 내가볼때는 상당히 가격에비해 양이 많은 편이라고 생각합니다.','2017-11-03 13:30:00');    
+insert into restaurant_review (restaurant_seq,member_seq,rating,title,content,reg_time) values (10,2,4.5,'불길이 강하다','여기 마음에 들었던게 어떠한 무한리필 고기집을가도 초반에는 불길이 약해서 너무너무 답답답답 했었지만 여기는 초반부터 불길이 강려크해서 기억에 남아 리뷰르 작성하네요.','2017-11-13 15:00:00');  
+
+
+insert into restaurant_review_image(review_seq,image) values (1,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeKR9ZqjBoUTuFr7H2EhnmxlgBHf3RdoqqFd48L4dy8GGLt-F4');
+insert into restaurant_review_image(review_seq,image) values (1,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIS2U3g9mJ62ZX-1OsoyPEz-qoCg7VFZFzOGFnyAf53gPIjx5Eg');
+insert into restaurant_review_image(review_seq,image) values (2,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuh3wVOIJ-FhVlAKsPSE5EeBje4YOJ49t3DnwlbajXVmzsHynUA');
+insert into restaurant_review_image(review_seq,image) values (2,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl9ArUyjaRdv6gzkvtPWDyui_3G3_9hHHow6a-ib8UMVK9OpQfoA');
+insert into restaurant_review_image(review_seq,image) values (3,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8FbUrex7eBC9J0U3cfchgVnFjUqVPPDNL3xfLtDR8mxAwdXg');
+insert into restaurant_review_image(review_seq,image) values (3,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnLOkPgbCyX6_UKEj89lUu-_w_YnvjW13W0EpaSTcQEABUpZIrg');
+insert into restaurant_review_image(review_seq,image) values (4,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDPnkp7M0sW_2Nq0ymNv5Xg5UyOnHFRUfQVZSJRumvDcKxANSBg');
+insert into restaurant_review_image(review_seq,image) values (4,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0rF1MKVXaghwGUp5RhvAaUw-bSelGYfZ4-iEBuqbu3D_PC1bE');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
